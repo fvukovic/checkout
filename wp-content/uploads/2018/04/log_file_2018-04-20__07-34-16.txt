@@ -1,0 +1,54 @@
+
+---Upload files---
+Content file was not uploaded. Error: 
+
+---Upload files---
+Redux file was not uploaded. Error: File is empty. Please upload something more substantial. This error could also be caused by uploads being disabled in your php.ini or by post_max_size being defined as smaller than upload_max_filesize in php.ini.
+
+---Upload files---
+The import files were successfully uploaded!
+Initial max execution time = 120
+Files info:
+Site URL = https://demo.codethemes.co/robolist-lite
+Data file = not defined!
+Widget file = /home/codethem/public_html/demo/robolist-lite/wp-content/uploads/2018/04/193.235.147.161-product-robolist-lite-widgets-1.wie
+Customizer file = /home/codethem/public_html/demo/robolist-lite/wp-content/uploads/2018/04/robolist-lite-export-1.dat
+Redux files:
+not defined!
+
+---Importing widgets---
+Sidebar : 
+
+Search - No Title - Widget already exists
+Recent Posts - No Title - Widget already exists
+Recent Comments - No Title - Widget already exists
+Archives - No Title - Widget already exists
+Categories - No Title - Widget already exists
+Meta - No Title - Widget already exists
+
+Single Page Listing Sidebar : 
+
+Recent Listings - Recent Listings - Imported
+Featured Listings - Featured Listings - Imported
+Gallery - Gallery - Imported
+
+Footer Widget 1 : 
+
+Text - Robolist - Imported
+
+Footer Widget 2 : 
+
+Recent Posts - Recent Posts - Imported
+
+Footer Widget 3 : 
+
+Recent Comments - Recent Comments - Imported
+
+Footer Widget 4 : 
+
+Gallery - Gallery - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
