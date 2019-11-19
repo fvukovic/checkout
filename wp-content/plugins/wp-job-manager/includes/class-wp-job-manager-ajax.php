@@ -188,7 +188,7 @@ class WP_Job_Manager_Ajax {
 		} else {
 			$message = '';
 		}
-
+		//TODO-pogledaj
 		$search_values = [
 			'location'   => $search_location,
 			'keywords'   => $search_keywords,

@@ -1251,8 +1251,8 @@ class WP_Job_Manager_Post_Types {
 
 		$fields = [
 			'_job_location'    => [
-				'label'         => __( 'Location', 'wp-job-manager' ),
-				'placeholder'   => __( 'e.g. "London"', 'wp-job-manager' ),
+				'label'         => __( 'Zipcode', 'wp-job-manager' ),
+				'placeholder'   => __( 'e.g. "Zipcode"', 'wp-job-manager' ),
 				'description'   => __( 'Leave this blank if the location is not important.', 'wp-job-manager' ),
 				'priority'      => 1,
 				'data_type'     => 'string',

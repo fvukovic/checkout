@@ -145,17 +145,22 @@ if (!function_exists('robolist_lite_add_extra_field')) {
             'placeholder' => esc_html__('e.g +42-898-4364', 'robolist-lite'),
             'priority' => 2.4
         );
+        //TODO-Filip - ako zelimo dodat u dashboard editiranje
         $fields['_price_field'] = array(
             'label' => esc_html__('Price', 'robolist-lite'),
             'type' => 'text',
             'placeholder' => esc_html__("$20", 'robolist-lite'),
             'priority' => 2.5
-        );
-        $fields['filip'] = array(
-            'label' => esc_html__('Price', 'robolist-lite'),
-            'type' => 'text',
-            'placeholder' => esc_html__("$20", 'robolist-lite'),
-            'priority' => 2.5
+        ); 
+        $fields['job']['country_field']  = array(
+            'metakey' => 'country_select',
+            'type' => 'select',
+            'label' => __('Country','ultimate-member'),
+            'priority' => 2.5,
+            'required' => 0,
+            'public' => 1,
+            'editable' => 1,
+            'options' => ['Deutschland','Austria', 'Slovenia'],
         );
         $fields['_main_image'] = array(
             'label' => esc_html__('Gallery', 'robolist-lite'),
@@ -243,6 +248,39 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'priority' => 2.5
         );
 
+
+        $fields['job']['country_field']  = array(
+            'title' => __('Roles (Radio)','ultimate-member'),
+            'metakey' => 'country_select',
+            'type' => 'select',
+            'label' => __('Account Type','ultimate-member'),
+            'required' => 0,
+            'public' => 1,
+            'editable' => 1,
+            'options' => ['Deutschland','Austria', 'Slovenia'],
+        );
+
+
+        $fields['job']['filip_field']  = array(
+            'title' => __('Roles (Radio)','ultimate-member'),
+            'metakey' => 'role_radio',
+            'type' => 'radio',
+            'label' => __('Account Type','ultimate-member'),
+            'required' => 0,
+            'public' => 1,
+            'editable' => 1,
+            'options' => ['Option1','Test'],
+        );
+
+        //TODO-Filip
+        $fields['job']['zipcode_field'] = array(
+            'label' => esc_html__('Zipcode', 'robolist-lite'),
+            'type' => 'text',
+            'placeholder' => esc_html__("Zipcode", 'robolist-lite'),
+            'required' => true,
+            'priority' => 5.0
+        );
+
         $fields['job']['main_image']['label']              = esc_html__( 'Gallery Images', 'robolist-lite' );
         $fields['job']['main_image']['description']              = esc_html__( 'Note: Requires at least 3 images. First image will be the feature image', 'robolist-lite' );
         $fields['job']['main_image']['priority']           = 2.6;
@@ -254,7 +292,7 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
         $fields['job']['main_image']['allowed_mime_types'] = $fields['company']['company_logo']['allowed_mime_types'];
         $fields['job']['main_image']['multiple']           = true;
 
-
+ 
         unset($fields['company']['company_name']);
         unset($fields['company']['company_website']);
         unset($fields['company']['company_tagline']);
@@ -523,9 +561,12 @@ if (!function_exists('robolist_lite_job_aearch')) {
                 <div class="banner-search-input">
 
                     <div class="banner-search-input-item search-key">
-                        <input type="text" name="search_keywords"
-                               placeholder="<?php echo esc_attr__('What are you looking for ?', 'robolist-lite'); ?>"
-                               value=""/>
+                	<select name="search_keywords">
+                        <option value="">-----</option> 
+                        <option value="Deutschland">Deutschland</option> 
+                        <option value="Austria">Austria</option> 
+                        <option value="Slovenia">Slovenia</option>  
+			        </select>	
                     </div>
                     <div class="banner-search-input-item location">
                         <input type="text" name="search_location"

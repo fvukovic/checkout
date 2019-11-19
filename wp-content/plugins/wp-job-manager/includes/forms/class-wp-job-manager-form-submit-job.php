@@ -210,11 +210,10 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 						'priority'    => 1,
 					],
 					'job_location'    => [
-						'label'       => __( 'Location', 'wp-job-manager' ),
-						'description' => __( 'Leave this blank if the location is not important', 'wp-job-manager' ),
+						'label'       => __( 'Zipcode', 'wp-job-manager' ),
 						'type'        => 'text',
-						'required'    => false,
-						'placeholder' => __( 'e.g. "London"', 'wp-job-manager' ),
+						'required'    => true,
+						'placeholder' => __( 'e.g. "44317"', 'wp-job-manager' ),
 						'priority'    => 2,
 					],
 					'job_type'        => [

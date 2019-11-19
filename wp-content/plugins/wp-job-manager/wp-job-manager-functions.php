@@ -264,6 +264,7 @@ if ( ! function_exists( 'get_job_listings_keyword_search' ) ) :
 		global $wpdb, $job_manager_keyword;
 
 		// Searchable Meta Keys: set to empty to search all meta keys.
+		//TODO-filip mozda je ovo kako se odreduju keywordsi
 		$searchable_meta_keys = [
 			'_job_location',
 			'_company_name',
@@ -272,6 +273,7 @@ if ( ! function_exists( 'get_job_listings_keyword_search' ) ) :
 			'_company_tagline',
 			'_company_website',
 			'_company_twitter',
+			'country_select',
 		];
 
 		$searchable_meta_keys = apply_filters( 'job_listing_searchable_meta_keys', $searchable_meta_keys );
@@ -452,7 +454,7 @@ if ( ! function_exists( 'job_manager_get_filtered_links' ) ) :
 				}
 			}
 		}
-
+			//TODO-pogledaj
 		$links = apply_filters(
 			'job_manager_job_filters_showing_jobs_links',
 			[
