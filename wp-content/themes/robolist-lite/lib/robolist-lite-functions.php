@@ -249,15 +249,19 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'priority' => 2.5
         ); 
         $fields['job']['job_country']  = array(
-            'title' => __('Roles (Radio)','ultimate-member'),
+            'title' => __('Roles (Radio)','robolist-lite'),
             'metakey' => 'job_country',
         //TODO - ovo treba prebrikat    
-            'type' => 'text',
-            'label' => __('Account Type','ultimate-member'),
-            'required' => 0,
+            'type' => 'select',
+            'label' => __('Land','robolist-lite'),
+            'required' => 1,
             'public' => 1,
-            'editable' => 1,
-            'options' => ['Deutschland','Austria', 'Slovenia'],
+            'editable' => 1, 
+            'options' => array(
+                'Deutschland' => 'Deutschland',
+                'Austria' => 'Austria',
+                'Slovenia' => 'Slovenia'),  
+            'priority' => 2.5
         );
 
  
