@@ -74,8 +74,7 @@ if ( ! function_exists( 'get_job_listings' ) ) :
 		}
 
 		if ( ! empty( $args['search_location'] ) ) {
-			$location_meta_keys = [ 'geolocation_formatted_address', '_job_country', 'geolocation_state_long' ];
-			$location_search    = [ 'relation' => 'OR' ];
+			$location_meta_keys = [  '_job_location',  ]; 
 			foreach ( $location_meta_keys as $meta_key ) {
 				$location_search[] = [
 					'key'     => $meta_key,
@@ -136,23 +135,20 @@ if ( ! function_exists( 'get_job_listings' ) ) :
 				'rand'       => 'ASC',
 			];
 		}
-
-		$job_manager_keyword = sanitize_text_field( $args['search_keywords'] );
-
-		if ( ! empty( $job_manager_keyword ) && strlen( $job_manager_keyword ) >= apply_filters( 'job_manager_get_listings_keyword_length_threshold', 2 ) ) {
-			$query_args['s'] = $job_manager_keyword;
-			add_filter( 'posts_search', 'get_job_listings_keyword_search' );
+ 
+		if ( ! empty( $args['search_keywords'] ) ) {
+			$location_meta_keys = [ '_job_country' ]; 
+			foreach ( $location_meta_keys as $meta_key ) {
+				$location_search[] = [
+					'key'     => $meta_key,
+					'value'   => $args['search_keywords'],
+					'compare' => 'like',
+				];
+			}
+			$query_args['meta_query'][] = $location_search;
 		}
-
 		$query_args = apply_filters( 'job_manager_get_listings', $query_args, $args );
-
-		if ( empty( $query_args['meta_query'] ) ) {
-			unset( $query_args['meta_query'] );
-		}
-
-		if ( empty( $query_args['tax_query'] ) ) {
-			unset( $query_args['tax_query'] );
-		}
+ 
 
 		/** This filter is documented in wp-job-manager.php */
 		$query_args['lang'] = apply_filters( 'wpjm_lang', null );
