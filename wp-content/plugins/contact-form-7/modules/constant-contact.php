@@ -730,6 +730,7 @@ class WPCF7_ConstantContact_ContactPostRequest {
 			&& ( $this->email_address || $this->first_name || $this->last_name );
 	}
 
+	//TODO-filip-koji je ovo kurac?
 	public function to_array() {
 		$output = array(
 			'email_address' => $this->email_address,

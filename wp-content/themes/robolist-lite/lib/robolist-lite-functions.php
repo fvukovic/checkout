@@ -137,6 +137,7 @@ if (!function_exists('robolist_lite_add_extra_field')) {
 
         $fields['_company_tagline']['priority'] = 2.1;
         $fields['_job_location']['priority'] = 2.2;
+        $fields['_job_country']['priority'] = 2.4;
         $fields['_company_website']['priority'] = 2.5;
         $fields['_company_twitter']['priority'] = 2.6;
 
@@ -152,8 +153,8 @@ if (!function_exists('robolist_lite_add_extra_field')) {
             'placeholder' => esc_html__("$20", 'robolist-lite'),
             'priority' => 2.5
         ); 
-        $fields['job']['country_field']  = array(
-            'metakey' => 'country_select',
+        $fields['job']['_job_country']  = array(
+            'metakey' => '_job_country',
             'type' => 'select',
             'label' => __('Country','ultimate-member'),
             'priority' => 2.5,
@@ -246,13 +247,12 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'placeholder' => esc_html__("$20", 'robolist-lite'),
             'required' => true,
             'priority' => 2.5
-        );
-
-
-        $fields['job']['country_field']  = array(
+        ); 
+        $fields['job']['job_country']  = array(
             'title' => __('Roles (Radio)','ultimate-member'),
-            'metakey' => 'country_select',
-            'type' => 'select',
+            'metakey' => 'job_country',
+        //TODO - ovo treba prebrikat    
+            'type' => 'text',
             'label' => __('Account Type','ultimate-member'),
             'required' => 0,
             'public' => 1,
@@ -260,17 +260,7 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'options' => ['Deutschland','Austria', 'Slovenia'],
         );
 
-
-        $fields['job']['filip_field']  = array(
-            'title' => __('Roles (Radio)','ultimate-member'),
-            'metakey' => 'role_radio',
-            'type' => 'radio',
-            'label' => __('Account Type','ultimate-member'),
-            'required' => 0,
-            'public' => 1,
-            'editable' => 1,
-            'options' => ['Option1','Test'],
-        );
+ 
 
         //TODO-Filip
         $fields['job']['zipcode_field'] = array(
@@ -281,17 +271,7 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'priority' => 5.0
         );
 
-        $fields['job']['main_image']['label']              = esc_html__( 'Gallery Images', 'robolist-lite' );
-        $fields['job']['main_image']['description']              = esc_html__( 'Note: Requires at least 3 images. First image will be the feature image', 'robolist-lite' );
-        $fields['job']['main_image']['priority']           = 2.6;
-        $fields['job']['main_image']['required']           = false;
-        $fields['job']['main_image']['type']               = 'file';
-        $fields['job']['main_image']['ajax']               = true;
-        $fields['job']['main_image']['required']           = true;
-        $fields['job']['main_image']['placeholder']        = esc_html__( 'Recommended 3 Images', 'robolist-lite' );
-        $fields['job']['main_image']['allowed_mime_types'] = $fields['company']['company_logo']['allowed_mime_types'];
-        $fields['job']['main_image']['multiple']           = true;
-
+ 
  
         unset($fields['company']['company_name']);
         unset($fields['company']['company_website']);

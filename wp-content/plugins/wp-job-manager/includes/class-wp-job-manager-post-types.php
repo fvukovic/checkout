@@ -1249,6 +1249,7 @@ class WP_Job_Manager_Post_Types {
 			$application_method_placeholder = __( 'https://', 'wp-job-manager' );
 		}
 
+		//TODO-filip ostali fieldovi -> ovo sam makno i nista se nije dogodilo
 		$fields = [
 			'_job_location'    => [
 				'label'         => __( 'Zipcode', 'wp-job-manager' ),

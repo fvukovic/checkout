@@ -35,7 +35,7 @@ function wpjm_rp4wp_template( $located, $template_name, $args ) {
 function wpjm_rp4wp_related_meta_fields( $meta_fields, $post_id, $post ) {
 	if ( 'job_listing' === $post->post_type ) {
 		$meta_fields[] = '_company_name';
-		$meta_fields[] = '_job_location';
+		$meta_fields[] = '_job_location'; 
 	}
 	return $meta_fields;
 }

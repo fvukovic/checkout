@@ -257,7 +257,7 @@ class WP_Job_Manager_Shortcodes {
 				'filled'    => __( 'Filled?', 'wp-job-manager' ),
 				'date'      => __( 'Date Posted', 'wp-job-manager' ),
 				'expires'   => __( 'Listing Expires', 'wp-job-manager' ),
-			]
+			] 
 		);
 
 		get_job_manager_template(
