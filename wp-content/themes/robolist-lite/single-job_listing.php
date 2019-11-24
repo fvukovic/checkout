@@ -14,6 +14,9 @@ $contact_form_enable = $robolist_lite_setting['single_joblist_form_enable'];
 $contact_form_sc = $robolist_lite_setting['single_joblist_form'];
 $contact_form_title = $robolist_lite_setting['single_form_title'];
 $location = get_post_meta($post->ID, '_job_location');
+$price = get_post_meta($post->ID, 'price_field');
+$country = get_post_meta($post->ID, '_job_country');
+
 $phone = get_post_meta($post->ID, '_company_phone');
 $gallery = get_post_meta($post->ID, '_main_image');
 $gallery_images = $gallery[0];
@@ -33,6 +36,13 @@ if (is_array($phone) && !empty($phone)){
 if (is_array($location)  && !empty($location)) {
     $location = $location[0] ? $location[0] : '';
 }
+if (is_array($country)  && !empty($country)) {
+    $country = $country[0] ? $country[0] : '';
+}
+if (is_array($price)  && !empty($price)) {
+    $price = $price[0] ? $price[0] : '';
+}
+
 if ( have_posts() ) :
 while ( have_posts() ) :
 the_post();
@@ -126,6 +136,13 @@ the_post();
                         echo '<span class="listing-loc"><i class="ion-ios-location-outline"></i>'.esc_html($location).'</span>';
                     if($phone)
                         echo '<span class="listing-tel"><i class="fa fa-phone"></i><a href="tel:'.esc_attr($phone).'">'.esc_html($phone).'</a></span>';
+                    //TODO-filip tu se dodaje u hearder PDP
+                    if($country)
+                    echo '<span class="listing-loc"><i class="ion-ios-location-outline"></i>'.esc_html($country).'</span>';
+                    if($price)
+                        echo '<span class="listing-loc"><i class="fa fa-phone"></i><a href="tel:'.esc_attr($price).'">'.esc_html($price).'</a></span>';
+                 
+                    
                     ?>
                 </div>
             </div>
@@ -145,6 +162,12 @@ the_post();
                 if (comments_open() || get_comments_number()) :
                     comments_template();
                 endif;
+
+                    ?>
+				</div>
+				<div class="col-md-12">			<h3 class="title-job">Description</h3>
+            <?php
+     
 
                     ?>
                 </div>
