@@ -162,14 +162,13 @@ the_post();
                     comments_template();
                 endif;
 
-                    ?>
-				</div>
-				<div class="col-md-12">			<h3 class="title-job">Price</h3>
+                    ?>  
+            <h3 class="title-job">Price</h3>
+                <span class="price-pdp">
             <?php
-                 echo $price;
-
-
+                 echo $price; 
                     ?>
+                </span>
                 </div>
             </div>
         </div>

@@ -545,8 +545,8 @@ if (!function_exists('robolist_lite_job_aearch')) {
                 <div class="banner-search-input">
 
                     <div class="banner-search-input-item search-key">
-                	<select name="search_keywords">
-                        <option value="">-----</option> 
+                	<select id="search_keywords" name="search_keywords" class="selectpicker select-country">
+				<option value="">Land auswählen</option> 
                         <option value="Deutschland">Deutschland</option> 
                         <option value="Austria">Austria</option> 
                         <option value="Slovenia">Slovenia</option>  
