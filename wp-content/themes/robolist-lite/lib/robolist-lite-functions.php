@@ -161,7 +161,7 @@ if (!function_exists('robolist_lite_add_extra_field')) {
             'required' => 0,
             'public' => 1,
             'editable' => 1,
-            'options' => ['Deutschland','Austria', 'Slovenia'],
+           'options' => ['Deutschland','Austria', 'Slovenia'],
         );
         $fields['_main_image'] = array(
             'label' => esc_html__('Gallery', 'robolist-lite'),
@@ -248,9 +248,9 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'required' => true,
             'priority' => 2.5
         ); 
-        $fields['job']['job_country']  = array(
+        $fields['job']['_job_country']  = array(
             'title' => __('Roles (Radio)','robolist-lite'),
-            'metakey' => 'job_country',
+            'metakey' => '_job_country',
         //TODO - ovo treba prebrikat    
             'type' => 'select',
             'label' => __('Land','robolist-lite'),
@@ -275,7 +275,17 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'priority' => 5.0
         );
 
- 
+        // $fields['job']['main_image']['label']              = esc_html__( 'Gallery Images', 'robolist-lite' );
+        // $fields['job']['main_image']['description']              = esc_html__( 'Note: Requires at least 3 images. First image will be the feature image', 'robolist-lite' );
+        // $fields['job']['main_image']['priority']           = 2.6;
+        // $fields['job']['main_image']['required']           = false;
+        // $fields['job']['main_image']['type']               = 'file';
+        // $fields['job']['main_image']['ajax']               = true;
+        // $fields['job']['main_image']['required']           = true;
+        // $fields['job']['main_image']['placeholder']        = esc_html__( 'Recommended 3 Images', 'robolist-lite' );
+        // $fields['job']['main_image']['allowed_mime_types'] = $fields['company']['company_logo']['allowed_mime_types'];
+        // $fields['job']['main_image']['multiple']           = true;
+
  
         unset($fields['company']['company_name']);
         unset($fields['company']['company_website']);
