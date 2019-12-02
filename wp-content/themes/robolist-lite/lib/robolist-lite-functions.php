@@ -142,7 +142,7 @@ if (!function_exists('robolist_lite_add_extra_field')) {
         $fields['_company_twitter']['priority'] = 2.6;
 
         $fields['_company_phone'] = array(
-            'label' => esc_html__('Phone', 'robolist-lite'),
+            'label' => esc_html__('Telefon', 'robolist-lite'),
             'placeholder' => esc_html__('e.g +42-898-4364', 'robolist-lite'),
             'priority' => 2.4
         );
@@ -228,12 +228,11 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
 
     function robolist_lite_front_submit_job_form_fields($fields)
     {
-
-
-        $fields['job']['job_title']['label'] = esc_html__('Listing Title', 'robolist-lite');
-        $fields['job']['application']['label'] = esc_html__('Contact Email/Url', 'robolist-lite');
-        $fields['job']['job_category']['label'] = esc_html__('Listing Category', 'robolist-lite');
-
+        $fields['job']['job_title']['label'] = esc_html__('Titel', 'robolist-lite');
+        $fields['job']['application']['label'] = esc_html__('Email Addresse', 'robolist-lite');
+        $fields['job']['application']['priority'] = 2.3; //TODO-filip email ustvari
+        $fields['job']['job_category']['label'] = esc_html__('Kategorie', 'robolist-lite');
+        $fields['job']['job_category']['priority'] = 2.7;
         $fields['job']['company_phone'] = array(
             'label' => esc_html__('Phone', 'robolist-lite'),
             'type' => 'text',
@@ -242,11 +241,19 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'priority' => 2.8
         );
         $fields['job']['price_field'] = array(
-            'label' => esc_html__('Price', 'robolist-lite'),
+            'label' => esc_html__('Angebot', 'robolist-lite'),
             'type' => 'text',
             'placeholder' => esc_html__("$20", 'robolist-lite'),
             'required' => true,
-            'priority' => 2.5
+            'priority' => 3
+        ); 
+        $fields['job']['company_field'] = array(
+            'label'       => __( 'Video', 'wp-job-manager' ),
+            'type' => 'text',
+            'sanitizer'   => 'url', 
+            'placeholder' => __( 'A link to a video about your company', 'wp-job-manager' ),
+            'required' => true,
+            'priority' =>2.65
         ); 
         $fields['job']['_job_country']  = array(
             'title' => __('Roles (Radio)','robolist-lite'),
@@ -261,32 +268,40 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
                 'Deutschland' => 'Deutschland',
                 'Austria' => 'Austria',
                 'Slovenia' => 'Slovenia'),  
+            'priority' => 1.1
+        );
+      
+
+        $fields['job']['website_field'] = array(
+            'label' => esc_html__('Website', 'robolist-lite'),
+            'type' => 'text',
+            'placeholder' => esc_html__("Addresse", 'robolist-lite'),
+            'required' => true,
             'priority' => 2.5
         );
 
- 
-
         //TODO-Filip
-        $fields['job']['zipcode_field'] = array(
-            'label' => esc_html__('Zipcode', 'robolist-lite'),
+  
+        $fields['job']['address_field'] = array(
+            'label' => esc_html__('Addresse', 'robolist-lite'),
             'type' => 'text',
-            'placeholder' => esc_html__("Zipcode", 'robolist-lite'),
+            'placeholder' => esc_html__("Addresse", 'robolist-lite'),
             'required' => true,
-            'priority' => 5.0
+            'priority' => 2.2
         );
 
-        // $fields['job']['main_image']['label']              = esc_html__( 'Gallery Images', 'robolist-lite' );
-        // $fields['job']['main_image']['description']              = esc_html__( 'Note: Requires at least 3 images. First image will be the feature image', 'robolist-lite' );
-        // $fields['job']['main_image']['priority']           = 2.6;
-        // $fields['job']['main_image']['required']           = false;
-        // $fields['job']['main_image']['type']               = 'file';
-        // $fields['job']['main_image']['ajax']               = true;
-        // $fields['job']['main_image']['required']           = true;
-        // $fields['job']['main_image']['placeholder']        = esc_html__( 'Recommended 3 Images', 'robolist-lite' );
-        // $fields['job']['main_image']['allowed_mime_types'] = $fields['company']['company_logo']['allowed_mime_types'];
-        // $fields['job']['main_image']['multiple']           = true;
+        $fields['job']['main_image']['label']              = esc_html__( 'Gallery', 'robolist-lite' );
+        //$fields['job']['main_image']['description']              = esc_html__( 'Note: Requires at least 3 images. First image will be the feature image', 'robolist-lite' );
+        $fields['job']['main_image']['priority']           = 2.6;
+        $fields['job']['main_image']['required']           = false;
+        $fields['job']['main_image']['type']               = 'file';
+        $fields['job']['main_image']['ajax']               = true;
+        $fields['job']['main_image']['required']           = true;
+        $fields['job']['main_image']['placeholder']        = esc_html__( 'Recommended 3 Images', 'robolist-lite' );
+        $fields['job']['main_image']['allowed_mime_types'] = $fields['company']['company_logo']['allowed_mime_types'];
+        $fields['job']['main_image']['multiple']           = true;
 
- 
+        //TODO-filip Video
         unset($fields['company']['company_name']);
         unset($fields['company']['company_website']);
         unset($fields['company']['company_tagline']);

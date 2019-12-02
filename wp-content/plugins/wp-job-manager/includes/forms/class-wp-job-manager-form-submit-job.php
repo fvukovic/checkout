@@ -203,31 +203,17 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 			[
 				'job'     => [
 					'job_title'       => [
-						'label'       => __( 'Job Title', 'wp-job-manager' ),
+						'label'       => __( 'Titel', 'wp-job-manager' ),
 						'type'        => 'text',
 						'required'    => true,
 						'placeholder' => '',
 						'priority'    => 1,
-					],
-					'job_country'       => [
-						'label'       => __( 'Job Title', 'wp-job-manager' ),
-						'type'        => 'text',
-						'required'    => true,
-						'placeholder' => '',
-						'priority'    => 1,
-					],
+					], 
 					'job_location'    => [
-						'label'       => __( 'Zipcode', 'wp-job-manager' ),
+						'label'       => __( 'Stadt / PLZ', 'wp-job-manager' ),
 						'type'        => 'text',
 						'required'    => true,
-						'placeholder' => __( 'e.g. "44317"', 'wp-job-manager' ),
-						'priority'    => 2,
-					],
-					'job_country'    => [
-						'label'       => __( 'Unesi me', 'wp-job-manager' ),
-						'type'        => 'text',
-						'required'    => true,
-						'placeholder' => __( 'e.g. "44317"', 'wp-job-manager' ),
+						'placeholder' => __( 'e.g. "Stadt / PLZ"', 'wp-job-manager' ),
 						'priority'    => 2,
 					],
 					'job_type'        => [
@@ -249,7 +235,7 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 						'taxonomy'    => 'job_listing_category',
 					],
 					'job_description' => [
-						'label'    => __( 'Description', 'wp-job-manager' ),
+						'label'    => __( 'Beschreibung vom unternehmen', 'wp-job-manager' ),
 						'type'     => 'wp-editor',
 						'required' => true,
 						'priority' => 5,
