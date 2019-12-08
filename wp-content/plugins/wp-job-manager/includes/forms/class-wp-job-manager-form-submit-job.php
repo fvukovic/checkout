@@ -517,9 +517,6 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 						case 'job_category':
 							$this->fields[ $group_key ][ $key ]['value'] = wp_get_object_terms( $job->ID, 'job_listing_category', [ 'fields' => 'ids' ] );
 							break;
-						case 'job_country':
-							$this->fields[ $group_key ][ $key ]['value'] = wp_get_object_terms( $job->ID, 'job_listing_country', [ 'fields' => 'ids' ] );
-							break;
 						case 'company_logo':
 							$this->fields[ $group_key ][ $key ]['value'] = has_post_thumbnail( $job->ID ) ? get_post_thumbnail_id( $job->ID ) : get_post_meta( $job->ID, '_' . $key, true );
 							break;
@@ -728,8 +725,6 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 			if ( apply_filters( 'submit_job_form_prefix_post_name_with_location', true ) && ! empty( $values['job']['job_location'] ) ) {
 				$job_slug[] = $values['job']['job_location'];
 			}
-
-			$job_slug[] = $values['job']['job_country'];
 
 
 			
