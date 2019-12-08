@@ -258,9 +258,12 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'public' => 1,
             'editable' => 1, 
             'options' => array(
+                'Ostereich' => 'Ostereich',
                 'Deutschland' => 'Deutschland',
-                'Austria' => 'Austria',
-                'Slovenia' => 'Slovenia'),  
+                'Schweiz' => 'Schweiz',
+                'Slowenien' => 'Slowenien',
+                'Kroatien' => 'Kroatien',
+                'Italien' => 'Italien'),
             'priority' => 1.1
         );
       
@@ -566,14 +569,18 @@ if (!function_exists('robolist_lite_job_aearch')) {
                     <div class="banner-search-input-item search-key">
                 	<select id="search_keywords" name="search_keywords" class="selectpicker select-country">
 				<option value="">Land auswählen</option> 
+                        <option value="Ostereich">Ostereich</option> 
                         <option value="Deutschland">Deutschland</option> 
-                        <option value="Austria">Austria</option> 
-                        <option value="Slovenia">Slovenia</option>  
+                        <option value="Slowenien">Slowenien</option> 
+                        <option value="Deutschland">Deutschland</option> 
+                        <option value="Kroatien">Kroatien</option> 
+                        <option value="Italien">Italien</option> 
+ 
 			        </select>	
                     </div>
                     <div class="banner-search-input-item location">
                         <input type="text" name="search_location"
-                               placeholder="<?php echo esc_attr__('PLZ', 'robolist-lite'); ?>" value=""/>
+                               placeholder="<?php echo esc_attr__('Stadt / PLZ', 'robolist-lite'); ?>" value=""/>
                     </div>
                     <div class="banner-search-input-item category">
                         <select class="selectpicker" data-live-search="true" name="search_category">

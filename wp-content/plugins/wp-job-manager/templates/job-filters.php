@@ -30,15 +30,18 @@ do_action( 'job_manager_job_filters_before', $atts );
 			<label for="search_keywords"><?php esc_html_e( 'Land', 'wp-job-manager' ); ?></label>
 			<select id="search_keywords" name="search_keywords" class="selectpicker select-country">
 				<option value="">Land auswählen</option>
-                <option value="Deutschland">Deutschland</option> 
-				<option value="Austria">Austria</option> 
-                <option value="Slovenia">Slovenia</option> 
+				<option value="Ostereich">Ostereich</option> 
+				<option value="Deutschland">Deutschland</option> 
+				<option value="Slowenien">Slowenien</option> 
+				<option value="Deutschland">Deutschland</option> 
+				<option value="Kroatien">Kroatien</option> 
+				<option value="Italien">Italien</option> 
 			</select>		
 		</div>
 
 		<div class="search_location">
-			<label for="search_location"><?php esc_html_e( 'PLZ', 'wp-job-manager' ); ?></label>
-			<input type="text" name="search_location" id="search_location" placeholder="<?php esc_attr_e( 'PLZ', 'wp-job-manager' ); ?>" value="<?php echo esc_attr( $location ); ?>" />
+			<label for="search_location"><?php esc_html_e( 'Stadt / PLZ', 'wp-job-manager' ); ?></label>
+			<input type="text" name="search_location" id="search_location" placeholder="<?php esc_attr_e( 'Stadt / PLZ', 'wp-job-manager' ); ?>" value="<?php echo esc_attr( $location ); ?>" />
 		</div>
 
 		<div style="clear: both"></div>
