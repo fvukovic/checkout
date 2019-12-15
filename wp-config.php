@@ -18,8 +18,8 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
+// // ** MySQL settings - You can get this info from your web host ** //
+// /** The name of the database for WordPress */
 // define( 'DB_NAME', '2589172db2' );
 
 // /** MySQL database username */
@@ -94,10 +94,13 @@ $table_prefix = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define( 'WP_DEBUG', true );
-
+//define( 'WP_DEBUG', true );
+define ('WPLANG', 'en_US');
+define('FS_METHOD', 'direct');
 /* That's all, stop editing! Happy publishing. */
-
+/** Memory Limit */
+define('WP_MEMORY_LIMIT', '256M');
+define( 'WP_MAX_MEMORY_LIMIT', '256M' );
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __FILE__ ) . '/' );

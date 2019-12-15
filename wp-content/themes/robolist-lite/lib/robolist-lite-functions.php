@@ -240,14 +240,6 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'required' => true,
             'priority' => 3
         ); 
-        $fields['job']['company_field'] = array(
-            'label'       => __( 'Video', 'wp-job-manager' ),
-            'type' => 'text',
-            'sanitizer'   => 'url', 
-            'placeholder' => __( 'A link to a video about your company', 'wp-job-manager' ),
-            'required' => true,
-            'priority' =>2.65
-        ); 
         $fields['job']['job_country']  = array(
             'title' => __('Roles (Radio)','robolist-lite'),
             'metakey' => 'job_country',
@@ -297,6 +289,19 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
         // $fields['job']['main_image']['placeholder']        = esc_html__( 'Recommended 3 Images', 'robolist-lite' );
         // $fields['job']['main_image']['allowed_mime_types'] = $fields['company']['company_logo']['allowed_mime_types'];
         // $fields['job']['main_image']['multiple']           = true;
+
+        // $fields['job']['main_video']['label']              = esc_html__( 'Video', 'robolist-lite' );
+        // //$fields['job']['main_image']['description']              = esc_html__( 'Note: Requires at least 3 images. First image will be the feature image', 'robolist-lite' );
+        // $fields['job']['main_video']['priority']           = 2.6;
+        // $fields['job']['main_video']['required']           = false;
+        // $fields['job']['main_video']['type']               = 'file';
+        // $fields['job']['main_video']['ajax']               = true;
+        // $fields['job']['main_video']['required']           = true;
+        //  $fields['job']['main_video']['allowed_mime_types'] = [
+        //     'mp4'  => 'MPEG',
+        // ];
+        // $fields['job']['main_video']['multiple']           = true;
+
 
         //TODO-filip Video
         unset($fields['company']['company_name']);
