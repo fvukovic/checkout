@@ -289,16 +289,16 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
         $fields['job']['main_image']['allowed_mime_types'] = $fields['company']['company_logo']['allowed_mime_types'];
         $fields['job']['main_image']['multiple']           = true;
 
-        $fields['job']['main_video']['label']              = esc_html__( 'Video', 'robolist-lite' );
-        $fields['job']['main_video']['priority']           = 2.6;
-        $fields['job']['main_video']['required']           = false;
-        $fields['job']['main_video']['type']               = 'file';
-        $fields['job']['main_video']['ajax']               = true;
-        $fields['job']['main_video']['required']           = true;
-         $fields['job']['main_video']['allowed_mime_types'] = [
-            'mp4'  => 'MPEG',
-        ];
-        $fields['job']['main_video']['multiple']           = true;
+        // $fields['job']['main_video']['label']              = esc_html__( 'Video', 'robolist-lite' );
+        // $fields['job']['main_video']['priority']           = 2.6;
+        // $fields['job']['main_video']['required']           = false;
+        // $fields['job']['main_video']['type']               = 'file';
+        // $fields['job']['main_video']['ajax']               = true;
+        // $fields['job']['main_video']['required']           = true;
+        //  $fields['job']['main_video']['allowed_mime_types'] = [
+        //     'mp4'  => 'MPEG',
+        // ];
+        // $fields['job']['main_video']['multiple']           = true;
 
 
         //TODO-filip Video
