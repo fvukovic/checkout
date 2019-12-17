@@ -99,6 +99,7 @@ class WP_Job_Manager_Setup {
 
 	/**
 	 * Handle request to the setup page.
+	 * TODO-FILIP tu se handlaju stepovi
 	 */
 	public function setup_page() {
 		$usage_tracking = WP_Job_Manager_Usage_Tracking::get_instance();

@@ -752,8 +752,19 @@ if ( ! empty( $pmpro_confirmed ) ) {
 				$pmproemail->sendCheckoutAdminEmail( $current_user, $invoice );
 			}
 
-			//redirect to confirmation
-			$rurl = pmpro_url( "confirmation", "?level=" . $pmpro_level->id );
+			//TODO-filipredirect to confirmation
+			delete_post_meta( $_REQUEST['post-id'], '_job_expires' );
+			$update_job                  = [];
+			$update_job['ID']            = $_REQUEST['post-id'];
+			$update_job['post_status']   = apply_filters( 'submit_job_post_status', 'pending', $job );
+			$update_job['post_date']     = current_time( 'mysql' );
+			$update_job['post_date_gmt'] = current_time( 'mysql', 1 );
+			$update_job['post_author']   = get_current_user_id();
+			
+			wp_update_post( $update_job );
+
+
+			$rurl = pmpro_url( "confirmation", "?level=" . $pmpro_level->id ."&once=" . $_REQUEST['once'] );
 			$rurl = apply_filters( "pmpro_confirmation_url", $rurl, $user_id, $pmpro_level );
 			wp_redirect( $rurl );
 			exit;

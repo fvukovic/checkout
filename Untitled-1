@@ -1,0 +1,103 @@
+<form method="post" id="job_preview" action="/testpage/job-form/">
+<input type="hidden" id="_wpjm_nonce" name="_wpjm_nonce" value="8ab3f2a4fb"><input type="hidden" name="_wp_http_referer" value="/testpage/job-form/">    <div class="container">
+        <div class="job_listing_preview_title">
+            <input type="button" name="continue" id="btn-payment" value="Next" onclick="window.location='/testpage/membership-account/membership-checkout/?level=1&amp;once=8ab3f2a4fb;'">
+            <input type="submit" name="next step" id="job_preview_submit_button" class="button job-manager-button-submit-listing" value="Submit Listing">
+
+            <input type="submit" name="edit_job" class="button job-manager-button-edit-listing" value="Edit listing">
+            <h2>Preview</h2>
+        </div>
+    </div>
+    <script>
+    console.log(document.getElementById('job_preview_submit_button'));
+   // document.getElementById('job_preview_submit_button').click();
+    </script>
+	<div class="job_listing_preview single_job_listing">
+        <div class="listing-single-slider section">
+
+                            <div class="container-fluid">
+                    <div class="row">
+                        <br>
+<b>Notice</b>:  Undefined variable: feature_image in <b>/Applications/XAMPP/xamppfiles/htdocs/testPage/wp-content/themes/robolist-lite/job_manager/job-preview.php</b> on line <b>101</b><br>
+<div class="listing-img-wrap" style="background-image:url()" "=""></div>                    </div>
+                </div>
+                
+            <div class="listing-detail-wrap">
+                <div class="container">
+                    <div class="col-md-7 dd">
+                        <div class="rl-single-author">
+                            <a href="http://localhost/testpage/author/ntkalek/">
+
+                                <img src="http://localhost/testpage/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg" class="gravatar avatar avatar-32 um-avatar um-avatar-default" width="32" height="32" alt="ntkalek" data-default="http://localhost/testpage/wp-content/plugins/ultimate-member/assets/img/default_avatar.jpg" onerror="if ( ! this.getAttribute('data-load-error') ){ this.setAttribute('data-load-error', '1');this.setAttribute('src', this.getAttribute('data-default'));}">                            </a>
+                        </div>
+                        <div class="rl-single-meta">
+                            <h2>3</h2>
+                            <div class="cat-star"><i class="fa fa-star rl-blank-star"></i><i class="fa fa-star rl-blank-star"></i><i class="fa fa-star rl-blank-star"></i><i class="fa fa-star rl-blank-star"></i><i class="fa fa-star rl-blank-star"></i><span>(0 Reviews</span>)</div>                            <span class="listing-loc"><i class="ion-ios-location-outline"></i>3</span><span class="listing-tel"><i class="fa fa-phone"></i><a href="tel:3">3</a></span>                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="listing-content section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p>3</p>
+                        </div>
+                        <div class="col-md-4">
+                                                            <div class="login-page">
+                                    <div class="form">
+
+                                        <h2>Contact This Business</h2><div role="form" class="wpcf7" id="wpcf7-f2008-p2772-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"></div>
+
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="2008">
+<input type="hidden" name="_wpcf7_version" value="5.1.5">
+<input type="hidden" name="_wpcf7_locale" value="en_US">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f2008-p2772-o1">
+<input type="hidden" name="_wpcf7_container_post" value="2772">
+</div>
+<p><label> Your Name (required)<br>
+    <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span> </label></p>
+<p><label> Your Email (required)<br>
+    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false"></span> </label></p>
+<p><label> Subject<br>
+    <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span> </label></p>
+<p><label> Your Message<br>
+    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </label></p>
+<p><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"></p>
+<div class="wpcf7-response-output wpcf7-display-none"></div></div>                                    </div>
+                                </div>
+                            
+			
+			<section id="media_gallery-1" class="widget widget_media_gallery"><h2 class="widget-title">Gallery</h2><div id="gallery-1" class="gallery galleryid-21 gallery-columns-3 gallery-size-full"><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="http://localhost/testpage/res/"><img width="1920" height="1280" src="http://localhost/testpage/wp-content/uploads/2018/03/res.jpg" class="attachment-full size-full" alt="" srcset="http://localhost/testpage/wp-content/uploads/2018/03/res.jpg 1920w, http://localhost/testpage/wp-content/uploads/2018/03/res-300x200.jpg 300w, http://localhost/testpage/wp-content/uploads/2018/03/res-768x512.jpg 768w, http://localhost/testpage/wp-content/uploads/2018/03/res-1024x683.jpg 1024w" sizes="(max-width: 1920px) 100vw, 1920px"></a>
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="http://localhost/testpage/os5ddd0/"><img width="1300" height="867" src="http://localhost/testpage/wp-content/uploads/2018/03/OS5DDD0.jpg" class="attachment-full size-full" alt="" srcset="http://localhost/testpage/wp-content/uploads/2018/03/OS5DDD0.jpg 1300w, http://localhost/testpage/wp-content/uploads/2018/03/OS5DDD0-300x200.jpg 300w, http://localhost/testpage/wp-content/uploads/2018/03/OS5DDD0-768x512.jpg 768w, http://localhost/testpage/wp-content/uploads/2018/03/OS5DDD0-1024x683.jpg 1024w" sizes="(max-width: 1300px) 100vw, 1300px"></a>
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="http://localhost/testpage/christopher-burns-189796/"><img width="2000" height="1321" src="http://localhost/testpage/wp-content/uploads/2018/03/christopher-burns-189796-e1521001931366.jpg" class="attachment-full size-full" alt="" srcset="http://localhost/testpage/wp-content/uploads/2018/03/christopher-burns-189796-e1521001931366.jpg 2000w, http://localhost/testpage/wp-content/uploads/2018/03/christopher-burns-189796-e1521001931366-300x198.jpg 300w, http://localhost/testpage/wp-content/uploads/2018/03/christopher-burns-189796-e1521001931366-768x507.jpg 768w, http://localhost/testpage/wp-content/uploads/2018/03/christopher-burns-189796-e1521001931366-1024x676.jpg 1024w" sizes="(max-width: 2000px) 100vw, 2000px"></a>
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="http://localhost/testpage/pizza-2802332_1920/"><img width="1920" height="1280" src="http://localhost/testpage/wp-content/uploads/2018/03/pizza-2802332_1920.jpg" class="attachment-full size-full" alt="" srcset="http://localhost/testpage/wp-content/uploads/2018/03/pizza-2802332_1920.jpg 1920w, http://localhost/testpage/wp-content/uploads/2018/03/pizza-2802332_1920-300x200.jpg 300w, http://localhost/testpage/wp-content/uploads/2018/03/pizza-2802332_1920-768x512.jpg 768w, http://localhost/testpage/wp-content/uploads/2018/03/pizza-2802332_1920-1024x683.jpg 1024w" sizes="(max-width: 1920px) 100vw, 1920px"></a>
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a href="http://localhost/testpage/pexels-photo-311066/"><img width="1280" height="853" src="http://localhost/testpage/wp-content/uploads/2018/03/pexels-photo-311066.jpeg" class="attachment-full size-full" alt="" srcset="http://localhost/testpage/wp-content/uploads/2018/03/pexels-photo-311066.jpeg 1280w, http://localhost/testpage/wp-content/uploads/2018/03/pexels-photo-311066-300x200.jpeg 300w, http://localhost/testpage/wp-content/uploads/2018/03/pexels-photo-311066-768x512.jpeg 768w, http://localhost/testpage/wp-content/uploads/2018/03/pexels-photo-311066-1024x682.jpeg 1024w" sizes="(max-width: 1280px) 100vw, 1280px"></a>
+			</div></figure><figure class="gallery-item">
+			<div class="gallery-icon portrait">
+				<a href="http://localhost/testpage/brenda-godinez-373449/"><img width="3498" height="4977" src="http://localhost/testpage/wp-content/uploads/2018/03/brenda-godinez-373449.jpg" class="attachment-full size-full" alt="" srcset="http://localhost/testpage/wp-content/uploads/2018/03/brenda-godinez-373449.jpg 3498w, http://localhost/testpage/wp-content/uploads/2018/03/brenda-godinez-373449-211x300.jpg 211w, http://localhost/testpage/wp-content/uploads/2018/03/brenda-godinez-373449-768x1093.jpg 768w, http://localhost/testpage/wp-content/uploads/2018/03/brenda-godinez-373449-720x1024.jpg 720w" sizes="(max-width: 3498px) 100vw, 3498px"></a>
+			</div></figure>
+		</div>
+</section>                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+		<input type="hidden" name="job_id" value="2772">
+		<input type="hidden" name="step" value="1">
+		<input type="hidden" name="job_manager_form" value="submit-job">
+	</div></form>

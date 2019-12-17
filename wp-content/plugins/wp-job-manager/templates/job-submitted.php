@@ -28,12 +28,9 @@ switch ( $job->post_status ) :
 		) . '</div>';
 	break;
 	case 'pending' :
-		echo '<div class="job-manager-message">' . wp_kses_post(
-			sprintf(
-				esc_html__( '%s submitted successfully. Your listing will be visible once approved.', 'wp-job-manager' ),
-				esc_html( $wp_post_types['job_listing']->labels->singular_name )
-			)
-		) . '</div>';
+		echo '<script type="text/javascript">
+           window.location = "/testPage/membership-account/membership-confirmation/?level=1"
+      </script>';
 	break;
 	default :
 		do_action( 'job_manager_job_submitted_content_' . str_replace( '-', '_', sanitize_title( $job->post_status ) ), $job );

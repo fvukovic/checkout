@@ -1071,36 +1071,7 @@ function um_profile_header( $args ) {
 			$allJobs = sizeof($jobs->query( $args ));	
 			?>
 			 <input type="hidden" id="all-jobs-hidden" value='<?php echo $allJobs; ?>'>
-			 <input type="hidden" id="user-role-hidden" value='<?php echo $user->membership_level->name; ?>'>
-			 <script>
-
-			function ready(callback){
-				// in case the document is already rendered
-				if (document.readyState!='loading') callback();
-				// modern browsers
-				else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
-				// IE <= 8
-				else document.attachEvent('onreadystatechange', function(){
-					if (document.readyState=='complete') callback();
-				});
-			}
-
-			ready(function(){
-				var role = document.getElementById("user-role-hidden").value
-				var allJobs = document.getElementById("all-jobs-hidden").value 
-				if(role === 'Premium'){ 
-					document.getElementById("add-job-description").style.display = "none";
-					document.getElementById("get-premium-role").style.display = "none";
-				}else{
-					document.getElementById("add-job-description-premium").style.display = "none";
-					if(allJobs>0){
-						document.getElementById("add-job-description").style.display = "none";
-
-					}
-				}
-			});
-			</script>
-
+	 
   
 			<div class="um-profile-status <?php echo esc_attr( um_user( 'account_status' ) ); ?>">
 				<span><?php printf( __( 'This user account status is %s', 'ultimate-member' ), um_user( 'account_status_name' ) ); ?></span>

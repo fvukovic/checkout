@@ -35,13 +35,10 @@ global $job_manager;
 			$jobs = new WP_Query();
 			$allJobs = sizeof($jobs->query( $args ));	
  
-			if($allJobs > 0 && $user->membership_level == null){ 
-				header("Location: http://www.check-fit.com/testPage/user/");
-				exit();
-			}
 			 
 			?>
-	 
+	 <script>    document.getElementById("step-1").classList.add("active-class");
+</script>
 			 <input type="hidden" id="user-role-hidden" value='<?php echo $user->membership_level->name; ?>'>
 	 
 	
@@ -111,28 +108,4 @@ global $job_manager;
 
 	<?php endif; ?>
 </form>
-<script>
-
-function ready(callback){
-    //TODO-filip TREBA JOS VALIDACIJA in case the document is already rendered
-    if (document.readyState!='loading') callback();
-    // modern browsers
-    else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
-    // IE <= 8
-    else document.attachEvent('onreadystatechange', function(){
-        if (document.readyState=='complete') callback();
-    });
-}
-
-ready(function(){
-	var role = document.getElementById("user-role-hidden").value
-	if(role === 'Premium'){ 
-		document.getElementsByClassName("add-job-description")[0].style.display = "none";
-		document.getElementsByClassName("get-premium-role").style.display = "none";
-	}else{
-		document.getElementsByClassName("add-job-description-premium")[0].style.display = "none";
-	}
-});
  
-
-</script>

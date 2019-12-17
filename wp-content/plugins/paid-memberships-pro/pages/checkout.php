@@ -22,6 +22,7 @@
 <div id="pmpro_level-<?php echo $pmpro_level->id; ?>" class="<?php echo $pmpro_checkout_gateway_class; ?>">
 <form id="pmpro_form" class="pmpro_form" action="<?php if(!empty($_REQUEST['review'])) echo pmpro_url("checkout", "?level=" . $pmpro_level->id); ?>" method="post">
 
+<input type="hidden" name="post-id" value="<?php echo $_GET['post_id'];?>" />
 	<input type="hidden" id="level" name="level" value="<?php echo esc_attr($pmpro_level->id) ?>" />
 	<input type="hidden" id="checkjavascript" name="checkjavascript" value="1" />
 	<?php if ($discount_code && $pmpro_review) { ?>
