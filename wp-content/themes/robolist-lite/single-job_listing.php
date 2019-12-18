@@ -184,27 +184,22 @@ if (have_posts()) :
                                 <div class="detail-label">Stadt/PLZ</div>
                                 <div class="detail-value"> <?php echo $location; ?></div>
                             </div>
+                            <?php if(!is_array($address)){ ?>   
                             <div class="detail-wrapper">
                                 <div class="detail-label">ADDRESSE</div>
                                 <div class="detail-value"> <?php echo $address; ?></div>
                             </div>
+                            <?php }?>
                             <div class="detail-wrapper">
                                 <div class="detail-label">EMAIL ADDRESSE</div>
                                 <div class="detail-value"> <?php echo $email; ?></div>
                             </div>
-
+                            <?php if(!is_array($website)){ ?>   
                             <div class="detail-wrapper">
-
                                 <div class="detail-label">WEBSITE</div>
                                 <div class="detail-value"> <?php echo $website; ?></div>
                             </div>
-
-                            <div class="detail-wrapper">
-
-                                <div class="detail-label">VIDEO</div>
-                                <div class="detail-value"> <?php echo $phone; ?></div>
-                            </div>
-
+                            <?php }?> 
                             <div class="detail-wrapper">
 
                                 <div class="detail-label">KATEGORIE</div>
@@ -223,6 +218,7 @@ if (have_posts()) :
                                 <div class="detail-value"> <?php echo $price; ?></div>
                             </div>
 
+                            <?php if(the_content()!= null){ ?>    
                             <div class="detail-wrapper">
                                 <div class="col-md-12">
                                     <div class="detail-label">BESCHREIBUNG VOM UNTERNEHMEN</div> 
@@ -240,6 +236,7 @@ if (have_posts()) :
                                 </div>
 
                             </div>
+                            <?php }?>
  
                 </div>
             </div>

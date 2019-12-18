@@ -88,7 +88,6 @@ if (is_array($location)  && !empty($location)) {
     $location = $location[0] ? $location[0] : '';
 }
 
-
 ?>
 <form method="post" id="job_preview" action="<?php echo esc_url($form->get_action()); ?>">
 
@@ -99,56 +98,55 @@ if (is_array($location)  && !empty($location)) {
                                                  * @since 1.32.2
                                                  */
                                                 do_action('preview_job_form_start');
-                                                $user = wp_get_current_user();
-                                                $user->membership_level = pmpro_getMembershipLevelForUser($user->ID);
     ?>
     <script>
         document.getElementById("step-2").classList.add("active-class");
-    </script> 
+    </script>
     <div class="job_listing_preview single_job_listing">
         <div class="listing-single-slider section">
-            <?php 
-                  $user = wp_get_current_user();
-                  $user->membership_level = pmpro_getMembershipLevelForUser($user->ID);
-            if (count($gallery_images) > 2) {                                                                                                                                         $bg_img = $gallery_images[0];
- ?>
-                
+            <?php
+                                                $formRole = $_REQUEST['role'];
+
+                                                if (count($gallery_images) > 2 ) {
+                                                    $bg_img = $gallery_images[0];
+            ?>
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="listing-gallery-wrap">
                             <?php
-                                                                                                                                            foreach ($gallery_images as $g) {
-                                                                                                                                                $image_style = "style='background-image:url(" . esc_url($g) . ")'";
-                                                                                                                                                echo '<div class="listing-gallery-holder" ' . wp_kses_post($image_style) . '"></div>';
-                                                                                                                                            }
+                                                    foreach ($gallery_images as $g) {
+                                                        $image_style = "style='background-image:url(" . esc_url($g) . ")'";
+                                                        echo '<div class="listing-gallery-holder" ' . wp_kses_post($image_style) . '"></div>';
+                                                    }
                             ?>
                         </div>
                     </div>
                 </div>
-            <?php  
-        } elseif ($user->membership_level->name == "Premium" && count($gallery_images) > 0 && count($gallery_images) <= 2) {
-                                                                                                                                      $bg_img = $gallery_images[0];
-            ?>
+            <?php
+                                                } elseif (is_array($gallery_images)  && count($gallery_images) > 0 && count($gallery_images) <= 2) {
+           ?>
                 <div class="container-fluid">
                     <div class="row">
                         <?php
-                                                                                                                                            $image_style = "style='background-image:url(" . esc_url($bg_img) . ")'";
-                                                                                                                                            echo '<div class="listing-img-wrap" ' . wp_kses_post($image_style) . '"></div>';
+                                                    $image_style = "style='background-image:url(" . esc_url($gallery_images[0]) . ")'";
+                                                    echo '<div class="listing-img-wrap" ' . wp_kses_post($image_style) . '"></div>';
                         ?>
                     </div>
                 </div>
             <?php } else {
+
             ?>
                 <div class="container-fluid">
                     <div class="row">
                         <?php
-        $image_style = "style='background-image:url(" . esc_url($gallery_images) . ")'";
-        echo '<div class="listing-img-wrap" ' . wp_kses_post($image_style) . '"></div>';
-?>
+                                                    $image_style = "style='background-image:url(" . esc_url($gallery_images) . ")'";
+                                                    echo '<div class="listing-img-wrap" ' . wp_kses_post($image_style) . '"></div>';
+                        ?>
                     </div>
                 </div>
             <?php
-                                                                                                                                        }
+                                                }
             ?>
 
             <div class="listing-detail-wrap">
@@ -163,40 +161,40 @@ if (is_array($location)  && !empty($location)) {
                         <div class="rl-single-meta">
                             <h2><?php the_title(); ?></h2>
                             <?php
-                                                                                                                                        if ($rating) {
-                                                                                                                                            echo '<div class="cat-star">';
-                                                                                                                                            for ($i = 1; $i <= 5; $i++) {
-                                                                                                                                                if ($i <= $rating)
-                                                                                                                                                    echo '<i class="fa fa-star"></i>';
-                                                                                                                                                else
-                                                                                                                                                    echo '<i class="fa fa-star rl-blank-star"></i>';
-                                                                                                                                            }
-                                                                                                                                            printf(
-                                                                                                                                                /* translators: %s: review count */
-                                                                                                                                                _n('<span>(%s Review)</span>', '<span>(%s Reviews</span>)', get_comments_number($post->ID), 'robolist-lite'),
-                                                                                                                                                absint(number_format_i18n(get_comments_number($post->ID)))
-                                                                                                                                            );
-                                                                                                                                            echo '</div>';
-                                                                                                                                        } else {
-                                                                                                                                            echo '<div class="cat-star">';
-                                                                                                                                            echo '<i class="fa fa-star rl-blank-star"></i>';
-                                                                                                                                            echo '<i class="fa fa-star rl-blank-star"></i>';
-                                                                                                                                            echo '<i class="fa fa-star rl-blank-star"></i>';
-                                                                                                                                            echo '<i class="fa fa-star rl-blank-star"></i>';
-                                                                                                                                            echo '<i class="fa fa-star rl-blank-star"></i>';
-                                                                                                                                            printf(
-                                                                                                                                                /* translators: %s: review count */
-                                                                                                                                                _n('<span>(%s Review)</span>', '<span>(%s Reviews</span>)', get_comments_number($post->ID), 'robolist-lite'),
-                                                                                                                                                absint(number_format_i18n(get_comments_number($post->ID)))
-                                                                                                                                            );
-                                                                                                                                            echo '</div>';
-                                                                                                                                        }
+                                                if ($rating) {
+                                                    echo '<div class="cat-star">';
+                                                    for ($i = 1; $i <= 5; $i++) {
+                                                        if ($i <= $rating)
+                                                            echo '<i class="fa fa-star"></i>';
+                                                        else
+                                                            echo '<i class="fa fa-star rl-blank-star"></i>';
+                                                    }
+                                                    printf(
+                                                        /* translators: %s: review count */
+                                                        _n('<span>(%s Review)</span>', '<span>(%s Reviews</span>)', get_comments_number($post->ID), 'robolist-lite'),
+                                                        absint(number_format_i18n(get_comments_number($post->ID)))
+                                                    );
+                                                    echo '</div>';
+                                                } else {
+                                                    echo '<div class="cat-star">';
+                                                    echo '<i class="fa fa-star rl-blank-star"></i>';
+                                                    echo '<i class="fa fa-star rl-blank-star"></i>';
+                                                    echo '<i class="fa fa-star rl-blank-star"></i>';
+                                                    echo '<i class="fa fa-star rl-blank-star"></i>';
+                                                    echo '<i class="fa fa-star rl-blank-star"></i>';
+                                                    printf(
+                                                        /* translators: %s: review count */
+                                                        _n('<span>(%s Review)</span>', '<span>(%s Reviews</span>)', get_comments_number($post->ID), 'robolist-lite'),
+                                                        absint(number_format_i18n(get_comments_number($post->ID)))
+                                                    );
+                                                    echo '</div>';
+                                                }
                             ?>
                             <?php
-                                                                                                                                        if ($location)
-                                                                                                                                            echo '<span class="listing-loc"><i class="ion-ios-location-outline"></i>' . esc_html($location) . '</span>';
-                                                                                                                                        if ($phone)
-                                                                                                                                            echo '<span class="listing-tel"><i class="fa fa-phone"></i><a href="tel:' . esc_attr($phone) . '">' . esc_html($phone) . '</a></span>';
+                                                if ($location)
+                                                    echo '<span class="listing-loc"><i class="ion-ios-location-outline"></i>' . esc_html($location) . '</span>';
+                                                if ($phone)
+                                                    echo '<span class="listing-tel"><i class="fa fa-phone"></i><a href="tel:' . esc_attr($phone) . '">' . esc_html($phone) . '</a></span>';
                             ?>
                         </div>
 
@@ -206,72 +204,68 @@ if (is_array($location)  && !empty($location)) {
             <div class="details-container">
                 <h3 class="title-review">Details</h3>
                 <div class="listing-content section">
-                            <div class="detail-wrapper">
-                                <div class="detail-label">Land</div>
-                                <div class="detail-value"> <?php echo $country; ?></div>
-                            </div>
-                            <div class="detail-wrapper">
+                    <div class="detail-wrapper">
+                        <div class="detail-label">Land</div>
+                        <div class="detail-value"> <?php echo $country; ?></div>
+                    </div>
+                    <div class="detail-wrapper">
 
-                                <div class="detail-label">Stadt/PLZ</div>
-                                <div class="detail-value"> <?php echo $location; ?></div>
-                            </div>
-                            <div class="detail-wrapper">
-                                <div class="detail-label">ADDRESSE</div>
-                                <div class="detail-value"> <?php echo $address; ?></div>
-                            </div>
-                            <div class="detail-wrapper">
-                                <div class="detail-label">EMAIL ADDRESSE</div>
-                                <div class="detail-value"> <?php echo $email; ?></div>
-                            </div>
+                        <div class="detail-label">Stadt/PLZ</div>
+                        <div class="detail-value"> <?php echo $location; ?></div>
+                    </div>
+                    <?php if(!is_array($address)){ ?>    
+                    <div class="detail-wrapper">
+                        <div class="detail-label">ADDRESSE</div>
+                        <div class="detail-value"> <?php  echo $address; ?></div>
+                    </div>
+                    <?php }?>  
+                    <div class="detail-wrapper">
+                        <div class="detail-label">EMAIL ADDRESSE</div>
+                        <div class="detail-value"> <?php echo $email; ?></div>
+                    </div>
+                        <?php if(!is_array($website)){ ?>                        
+                    <div class="detail-wrapper">
 
-                            <div class="detail-wrapper">
+                        <div class="detail-label">WEBSITE</div>
+                        <div class="detail-value"> <?php  echo $website; ?></div>
+                    </div>
+                      <?php }?> 
 
-                                <div class="detail-label">WEBSITE</div>
-                                <div class="detail-value"> <?php echo $website; ?></div>
-                            </div>
+                    <div class="detail-wrapper">
 
-                            <div class="detail-wrapper">
+                        <div class="detail-label">KATEGORIE</div>
+                        <div class="detail-value"> <?php echo esc_attr($category->name); ?></div>
+                    </div>
 
-                                <div class="detail-label">VIDEO</div>
-                                <div class="detail-value"> <?php echo $phone; ?></div>
-                            </div>
+                    <div class="detail-wrapper">
 
-                            <div class="detail-wrapper">
+                        <div class="detail-label">TELEFON</div>
+                        <div class="detail-value"> <?php echo $phone; ?></div>
+                    </div>
 
-                                <div class="detail-label">KATEGORIE</div>
-                                <div class="detail-value"> <?php echo esc_attr($category->name); ?></div>
-                            </div>
+                    <div class="detail-wrapper">
 
-                            <div class="detail-wrapper">
+                        <div class="detail-label">ANGEBOT</div>
+                        <div class="detail-value"> <?php echo $price; ?></div>
+                    </div>
+                   <?php if(the_content()!= null){ ?>          
+                    <div class="detail-wrapper">
+                        <div class="detail-label">BESCHREIBUNG VOM UNTERNEHMEN</div>
+                        <?php
+                                                    the_content();
+                                                    wp_link_pages(array(
+                                                        'before' => '<div class="page-links">' . esc_html__('Pages:', 'robolist-lite'),
+                                                        'after'  => '</div>',
+                                                    ));
+                                                    if (comments_open() || get_comments_number()) :
+                                                        comments_template();
+                                                    endif;
 
-                                <div class="detail-label">TELEFON</div>
-                                <div class="detail-value"> <?php echo $phone; ?></div>
-                            </div>
+                                                                 ?>
 
-                            <div class="detail-wrapper">
+                    </div>
+                                                <?php }?>
 
-                                <div class="detail-label">ANGEBOT</div>
-                                <div class="detail-value"> <?php echo $price; ?></div>
-                            </div>
-
-                            <div class="detail-wrapper">
-                                <div class="col-md-12">
-                                    <div class="detail-label">BESCHREIBUNG VOM UNTERNEHMEN</div> 
-                                        <?php
-                                                                                                                                        the_content();
-                                                                                                                                        wp_link_pages(array(
-                                                                                                                                            'before' => '<div class="page-links">' . esc_html__('Pages:', 'robolist-lite'),
-                                                                                                                                            'after'  => '</div>',
-                                                                                                                                        ));
-                                                                                                                                        if (comments_open() || get_comments_number()) :
-                                                                                                                                            comments_template();
-                                                                                                                                        endif;
-
-                                        ?> 
-                                </div>
-
-                            </div>
- 
                 </div>
             </div>
         </div>
@@ -279,16 +273,20 @@ if (is_array($location)  && !empty($location)) {
         <input type="hidden" name="step" value="<?php echo esc_attr($form->get_step()); ?>" />
         <input type="hidden" name="job_manager_form" value="<?php echo esc_attr($form->get_form_name()); ?>" />
         <div class="container">
-        <div class="job_listing_preview_title">
-            <input type="submit" name="edit_job" class="button job-manager-button-edit-listing" value="Back" />
+            <div class="job_listing_preview_title">
+                <input type="submit" name="edit_job" class="button job-manager-button-edit-listing" value="Back" />
 
-            <?php if ($user->membership_level->name !== "Premium") { ?>
+                <?php 
+                 $user = wp_get_current_user(); 
+                 $user->membership_level = pmpro_getMembershipLevelForUser($user->ID);  
 
-                <input type="button" onclick="window.location='/testPage/membership-account/membership-checkout/?level=1&post_id=<?php echo $post->ID ?>';" name="next" id="job_preview_submit_button" class="button job-manager-button-submit-listing" value="Become Premium member" />
-            <?php }   ?>
-                <input type="submit" name="continue" id="job_preview_submit_button" class="button job-manager-button-submit-listing" value="Next" />
-       
+                if ($formRole == "premium" && $user->membership_level->name !="Premium") { ?>
+
+                    <input type="button" onclick="window.location='/testPage/en/membership-account/membership-checkout/?level=1&post_id=<?php echo $post->ID ?>';" name="next" id="job_preview_submit_button" class="button job-manager-button-submit-listing" value="Next" />
+                <?php } else {  ?>
+                    <input type="submit" name="continue" id="job_preview_submit_button" class="button job-manager-button-submit-listing" value="Next" />
+                <?php  } ?>
+            </div>
         </div>
-    </div>
     </div>
 </form>

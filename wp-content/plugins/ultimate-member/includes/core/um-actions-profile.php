@@ -1078,10 +1078,16 @@ function um_profile_header( $args ) {
 			document.addEventListener("DOMContentLoaded", function(event) {
 				var jobCount = document.getElementById("all-jobs-hidden").value;
 				var userRole = document.getElementById("user-role").value;
-
-				if((jobCount>2 && userRole == "Premium") || (jobCount>0 && userRole !== "Premium")){
-					document.getElementById("new-job").style.display = 'none';
-				} 
+				if(userRole == "Premium"){
+					document.getElementById("free-job").disabled = true;
+					if(jobCount>2){
+						document.getElementById("premium-job").disabled = true;
+						} 
+				}else{
+					if(jobCount>0){
+						document.getElementById("free-job").disabled = true;
+					}
+				}
 			});
 		
 			</script>

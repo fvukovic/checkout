@@ -3,8 +3,7 @@
  * ======  Wp Jobs Manager Filters START  ======
  */
 //change job manager post type name
-if (!function_exists('robolist_change_job_into_listing')) {
-
+if (!function_exists('robolist_change_job_into_listing')) { 
 function robolist_change_job_into_listing($args)
 {
 
@@ -220,10 +219,8 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
 
     function robolist_lite_front_submit_job_form_fields($fields)
     {
-
-        $user = wp_get_current_user();
-        $user->membership_level = pmpro_getMembershipLevelForUser($user->ID); 
-        if ($user->membership_level->name !== "Premium") 
+        $formRole = $_REQUEST['role']; 
+        if ($formRole !== "premium") 
         {
             unset($fields['job']['job_description']); 
         }
@@ -283,9 +280,9 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
         $fields['job']['main_image']['allowed_mime_types'] = $fields['company']['company_logo']['allowed_mime_types'];
         $fields['job']['main_image']['multiple']           = false;
 
-        $user = wp_get_current_user();
-        $user->membership_level = pmpro_getMembershipLevelForUser($user->ID);
-        if ($user->membership_level->name == "Premium") {
+        $formRole = $_REQUEST['role']; 
+
+        if ($formRole == "premium") {
             $fields['job']['main_image']['multiple'] = true;
 
             $fields['job']['address_field'] = array(

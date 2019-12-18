@@ -954,7 +954,6 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 		if ( ! empty( $_POST['continue'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Input is used safely.
 			$job = get_post( $this->job_id );
 
-			//todo-filip updejt joba
 			if ( in_array( $job->post_status, [ 'preview', 'expired' ], true ) ) {
 				// Reset expiry.
 				delete_post_meta( $job->ID, '_job_expires' );
