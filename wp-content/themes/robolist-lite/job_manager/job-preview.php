@@ -107,7 +107,12 @@ if (is_array($location)  && !empty($location)) {
     </script> 
     <div class="job_listing_preview single_job_listing">
         <div class="listing-single-slider section">
-            <?php if (count($gallery_images) > 2) { ?>
+            <?php 
+                  $user = wp_get_current_user();
+                  $user->membership_level = pmpro_getMembershipLevelForUser($user->ID);
+            if (count($gallery_images) > 2) {                                                                                                                                         $bg_img = $gallery_images[0];
+ ?>
+                
                 <div class="container-fluid">
                     <div class="row">
                         <div class="listing-gallery-wrap">
@@ -121,8 +126,8 @@ if (is_array($location)  && !empty($location)) {
                     </div>
                 </div>
             <?php  
-        } elseif (count($gallery_images) > 0 && count($gallery_images) <= 2) {
-                                                                                                                                            $bg_img = $gallery_images[0];
+        } elseif ($user->membership_level->name == "Premium" && count($gallery_images) > 0 && count($gallery_images) <= 2) {
+                                                                                                                                      $bg_img = $gallery_images[0];
             ?>
                 <div class="container-fluid">
                     <div class="row">
@@ -137,9 +142,9 @@ if (is_array($location)  && !empty($location)) {
                 <div class="container-fluid">
                     <div class="row">
                         <?php
-                                                                                                                                            $image_style = "style='background-image:url(" . esc_url($feature_image) . ")'";
-                                                                                                                                            echo '<div class="listing-img-wrap" ' . wp_kses_post($image_style) . '"></div>';
-                        ?>
+        $image_style = "style='background-image:url(" . esc_url($gallery_images) . ")'";
+        echo '<div class="listing-img-wrap" ' . wp_kses_post($image_style) . '"></div>';
+?>
                     </div>
                 </div>
             <?php
