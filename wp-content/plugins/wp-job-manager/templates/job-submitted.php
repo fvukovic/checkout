@@ -28,9 +28,7 @@ switch ( $job->post_status ) :
 		) . '</div>';
 	break;
 	case 'pending' :
-		echo '<script type="text/javascript">
-           window.location = "/testPage/membership-account/membership-confirmation/?level=1"
-      </script>';
+		header("Location: /testPage/membership-account/membership-confirmation/?level=1&message=listing");
 	break;
 	default :
 		do_action( 'job_manager_job_submitted_content_' . str_replace( '-', '_', sanitize_title( $job->post_status ) ), $job );

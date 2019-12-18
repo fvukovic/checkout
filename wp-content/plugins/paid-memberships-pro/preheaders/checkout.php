@@ -763,7 +763,7 @@ if ( ! empty( $pmpro_confirmed ) ) {
 			wp_update_post( $update_job );
 
 			// header("Location: /testPage/job-form/");
-			 $rurl = pmpro_url( "confirmation", "?level=" . $pmpro_level->id ."&once=" . $_REQUEST['once'] );
+			 $rurl = pmpro_url( "confirmation", "?level=" . $pmpro_level->id ."&once=" . $_REQUEST['once']."&message=premium" );
 			$rurl = apply_filters( "pmpro_confirmation_url", $rurl, $user_id, $pmpro_level );
 			wp_redirect( $rurl );
 			exit;

@@ -271,9 +271,8 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
 
 
         $fields['job']['main_image']['label']              = esc_html__( 'Gallery', 'robolist-lite' );
-        $fields['job']['main_image']['description']              = esc_html__( 'Note: Requires at least 3 images. First image will be the feature image', 'robolist-lite' );
         $fields['job']['main_image']['priority']           = 2.6;
-        $fields['job']['main_image']['required']           = false;
+        $fields['job']['main_image']['required']           = true;
         $fields['job']['main_image']['type']               = 'file';
         $fields['job']['main_image']['ajax']               = true;
         $fields['job']['main_image']['placeholder']        = esc_html__( 'Recommended 3 Images', 'robolist-lite' );

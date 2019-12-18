@@ -24,6 +24,7 @@ $gallery = get_post_meta($form->get_job_id(), '_main_image');
 $location = get_post_meta($post->ID, '_job_location');
 $price = get_post_meta($post->ID, '_price_field');
 $country = get_post_meta($post->ID, '_job_country');
+$description = get_post_meta($post->ID, '_job_description'); 
 $address = get_post_meta($post->ID, '_address_field');
 $website = get_post_meta($post->ID, '_website_field');
 $email = get_post_meta($post->ID, '_application');
@@ -48,6 +49,10 @@ if (is_array($phone) && !empty($phone)) {
 if (is_array($location)  && !empty($location)) {
     $location = $location[0] ? $location[0] : '';
 }
+if (is_array($description)  && !empty($description)) {
+    $description = $description[0] ? $description[0] : '';
+} 
+
 if (is_array($country)  && !empty($country)) {
     $country = $country[0] ? $country[0] : '';
 }
@@ -213,7 +218,7 @@ if (is_array($location)  && !empty($location)) {
                         <div class="detail-label">Stadt/PLZ</div>
                         <div class="detail-value"> <?php echo $location; ?></div>
                     </div>
-                    <?php if(!is_array($address)){ ?>    
+                    <?php if($formRole == "premium"){ ?>    
                     <div class="detail-wrapper">
                         <div class="detail-label">ADDRESSE</div>
                         <div class="detail-value"> <?php  echo $address; ?></div>
@@ -223,7 +228,7 @@ if (is_array($location)  && !empty($location)) {
                         <div class="detail-label">EMAIL ADDRESSE</div>
                         <div class="detail-value"> <?php echo $email; ?></div>
                     </div>
-                        <?php if(!is_array($website)){ ?>                        
+                    <?php if($formRole == "premium"){ ?>    
                     <div class="detail-wrapper">
 
                         <div class="detail-label">WEBSITE</div>
@@ -248,7 +253,7 @@ if (is_array($location)  && !empty($location)) {
                         <div class="detail-label">ANGEBOT</div>
                         <div class="detail-value"> <?php echo $price; ?></div>
                     </div>
-                   <?php if(the_content()!= null){ ?>          
+                    <?php if($formRole == "premium"){ ?>    
                     <div class="detail-wrapper">
                         <div class="detail-label">BESCHREIBUNG VOM UNTERNEHMEN</div>
                         <?php

@@ -28,9 +28,7 @@ switch ( $job->post_status ) :
         __( '%1$s listed successfully. To view your listing <a href="%2$s">click here</a>.', 'robolist-lite' ), $wp_post_types['job_listing']->labels->singular_name, esc_url( get_permalink( $job->ID ) ) );
 	break;
 	case 'pending' :
-		echo '<script type="text/javascript">
-		window.location = "/testPage/membership-account/membership-confirmation/?level=1"
-   </script>';
+		header("Location: /testPage/membership-account/membership-confirmation/?level=1");
 		break;
 	default :
 		do_action( 'job_manager_job_submitted_content_' . str_replace( '-', '_', sanitize_title( $job->post_status ) ), $job );

@@ -12,9 +12,9 @@ if($current_user->ID)
 */
 $gateways_with_pending_status = apply_filters('pmpro_gateways_with_pending_status', array('paypalstandard', 'twocheckout', 'gourl'));
 	
-//must be logged in
-if (empty($current_user->ID) || (empty($current_user->membership_level->ID) && !in_array(pmpro_getGateway(), $gateways_with_pending_status)))
-    wp_redirect(home_url());
+// //must be logged in
+// if (empty($current_user->ID) || (empty($current_user->membership_level->ID) && !in_array(pmpro_getGateway(), $gateways_with_pending_status)))
+//     wp_redirect(home_url());
 
 //if membership is a paying one, get invoice from DB
 if (!empty($current_user->membership_level) && !pmpro_isLevelFree($current_user->membership_level)) {

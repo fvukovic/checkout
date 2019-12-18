@@ -99,7 +99,7 @@ global $job_manager;
 			<input type="hidden" name="job_manager_form" value="<?php echo esc_attr($form); ?>" />
 			<input type="hidden" name="job_id" value="<?php echo esc_attr( $job_id ); ?>" />
 			<input type="hidden" name="step" value="<?php echo esc_attr( $step ); ?>" />
-			<input type="submit" name="submit_job" class="button" value="<?php echo esc_attr( $submit_button_text ); ?>" />
+			<input type="submit" name="submit_job" class="button" value="Next" />
 		</p>
 
 	<?php else : ?>

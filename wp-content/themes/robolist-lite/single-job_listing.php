@@ -21,6 +21,7 @@ $address = get_post_meta($post->ID, '_address_field');
 $website = get_post_meta($post->ID, '_website_field');
 $email = get_post_meta($post->ID, '_application');
 $category = get_the_terms($post->ID, 'job_listing_category');
+$description = get_post_meta($post->ID, '_job_description'); 
 //$country = get_post_meta($post->ID, 'company_field'); 
 $phone = get_post_meta($post->ID, '_company_phone');
 $gallery = get_post_meta($post->ID, '_main_image');
@@ -55,6 +56,10 @@ if (is_array($website)  && !empty($website)) {
 if (is_array($email)  && !empty($email)) {
     $email = $email[0] ? $email[0] : '';
 }
+
+if (is_array($description)  && !empty($description)) {
+    $description = $description[0] ? $description[0] : '';
+} 
 
 if (is_array($category)  && !empty($category)) {
     $category = $category[0] ? $category[0] : '';
@@ -218,7 +223,7 @@ if (have_posts()) :
                                 <div class="detail-value"> <?php echo $price; ?></div>
                             </div>
 
-                            <?php if(the_content()!= null){ ?>    
+                            <?php if($description==""){ ?>    
                             <div class="detail-wrapper">
                                 <div class="col-md-12">
                                     <div class="detail-label">BESCHREIBUNG VOM UNTERNEHMEN</div> 

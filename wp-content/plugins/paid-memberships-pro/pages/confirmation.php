@@ -135,3 +135,17 @@
 		<?php } ?>
 	</div>
 </nav>
+<?php 
+	$message = $_REQUEST['message'];
+?>
+<script>
+	document.addEventListener("DOMContentLoaded", function(event) { 
+		if('<?php echo $message?>' == "listing"){
+			document.getElementById("membership-submit-message").style.display = 'none';
+			document.getElementById("membership-confirmation").style.display = 'block';
+		}else{
+			document.getElementById("membership-confirmation").style.display = 'none';
+			document.getElementById("membership-submit-message").style.display = 'block';
+		}
+	});
+</script>
