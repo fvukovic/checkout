@@ -107,7 +107,6 @@ if (is_array($location)  && !empty($location)) {
     </script> 
     <div class="job_listing_preview single_job_listing">
         <div class="listing-single-slider section">
-        <div class="asd"> <?php echo json_encode($gallery_images); ?> </div>
             <?php if (count($gallery_images) > 2) { ?>
                 <div class="container-fluid">
                     <div class="row">
@@ -280,10 +279,10 @@ if (is_array($location)  && !empty($location)) {
 
             <?php if ($user->membership_level->name !== "Premium") { ?>
 
-                <input type="button" onclick="window.location='/testPage/membership-account/membership-checkout/?level=1&post_id=<?php echo $post->ID ?>';" name="next" id="job_preview_submit_button" class="button job-manager-button-submit-listing" value="Next" />
-            <?php } else {    ?>
-                <input type="submit" name="continue" id="job_preview_submit_button" class="button job-manager-button-submit-listing" value="Next" />
+                <input type="button" onclick="window.location='/testPage/membership-account/membership-checkout/?level=1&post_id=<?php echo $post->ID ?>';" name="next" id="job_preview_submit_button" class="button job-manager-button-submit-listing" value="Become Premium member" />
             <?php }   ?>
+                <input type="submit" name="continue" id="job_preview_submit_button" class="button job-manager-button-submit-listing" value="Next" />
+       
         </div>
     </div>
     </div>

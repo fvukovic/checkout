@@ -1071,8 +1071,20 @@ function um_profile_header( $args ) {
 			$allJobs = sizeof($jobs->query( $args ));	
 			?>
 			 <input type="hidden" id="all-jobs-hidden" value='<?php echo $allJobs; ?>'>
-	 
-  
+			 <input type="hidden" id="user-role" value='<?php echo $user->membership_level->name; ?>'>
+
+			<script>
+
+			document.addEventListener("DOMContentLoaded", function(event) {
+				var jobCount = document.getElementById("all-jobs-hidden").value;
+				var userRole = document.getElementById("user-role").value;
+
+				if((jobCount>2 && userRole == "Premium") || (jobCount>0 && userRole !== "Premium")){
+					document.getElementById("new-job").style.display = 'none';
+				} 
+			});
+		
+			</script>
 			<div class="um-profile-status <?php echo esc_attr( um_user( 'account_status' ) ); ?>">
 				<span><?php printf( __( 'This user account status is %s', 'ultimate-member' ), um_user( 'account_status_name' ) ); ?></span>
 			</div>

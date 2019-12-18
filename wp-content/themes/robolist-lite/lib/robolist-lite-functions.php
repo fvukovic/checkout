@@ -220,6 +220,15 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
 
     function robolist_lite_front_submit_job_form_fields($fields)
     {
+
+        $user = wp_get_current_user();
+        $user->membership_level = pmpro_getMembershipLevelForUser($user->ID); 
+        if ($user->membership_level->name !== "Premium") 
+        {
+            unset($fields['job']['job_description']); 
+        }
+
+
         $fields['job']['job_title']['label'] = esc_html__('Titel', 'robolist-lite');
         $fields['job']['application']['label'] = esc_html__('Email Addresse', 'robolist-lite');
         $fields['job']['application']['priority'] = 2.3; //TODO-filip email ustvari
@@ -250,7 +259,7 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'public' => 1,
             'editable' => 1, 
             'options' => array(
-                'Ostereich' => 'Ostereich',
+                'Ostereich' => 'Österreich',
                 'Deutschland' => 'Deutschland',
                 'Schweiz' => 'Schweiz',
                 'Slowenien' => 'Slowenien',
@@ -260,24 +269,9 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
         );
       
 
-
-        $fields['job']['website_field'] = array(
-            'label' => esc_html__('Website', 'robolist-lite'),
-            'type' => 'text',
-            'placeholder' => esc_html__("Addresse", 'robolist-lite'),
-            'required' => true,
-            'priority' => 2.5
-        );
-
         //TODO-Filip
   
-        $fields['job']['address_field'] = array(
-            'label' => esc_html__('Addresse', 'robolist-lite'),
-            'type' => 'text',
-            'placeholder' => esc_html__("Addresse", 'robolist-lite'),
-            'required' => true,
-            'priority' => 2.2
-        );
+
 
         $fields['job']['main_image']['label']              = esc_html__( 'Gallery', 'robolist-lite' );
         $fields['job']['main_image']['description']              = esc_html__( 'Note: Requires at least 3 images. First image will be the feature image', 'robolist-lite' );
@@ -287,7 +281,30 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
         $fields['job']['main_image']['ajax']               = true;
         $fields['job']['main_image']['placeholder']        = esc_html__( 'Recommended 3 Images', 'robolist-lite' );
         $fields['job']['main_image']['allowed_mime_types'] = $fields['company']['company_logo']['allowed_mime_types'];
-        $fields['job']['main_image']['multiple']           = true;
+        $fields['job']['main_image']['multiple']           = false;
+
+        $user = wp_get_current_user();
+        $user->membership_level = pmpro_getMembershipLevelForUser($user->ID);
+        if ($user->membership_level->name == "Premium") {
+            $fields['job']['main_image']['multiple'] = true;
+
+            $fields['job']['address_field'] = array(
+                'label' => esc_html__('Addresse', 'robolist-lite'),
+                'type' => 'text',
+                'placeholder' => esc_html__("Addresse", 'robolist-lite'),
+                'required' => true,
+                'priority' => 2.2
+            );
+
+        $fields['job']['website_field'] = array(
+            'label' => esc_html__('Website', 'robolist-lite'),
+            'type' => 'text',
+            'placeholder' => esc_html__("Addresse", 'robolist-lite'),
+            'required' => true,
+            'priority' => 2.5
+        );
+
+        }
 
         // $fields['job']['main_video']['label']              = esc_html__( 'Video', 'robolist-lite' );
         // $fields['job']['main_video']['priority']           = 2.6;
@@ -572,8 +589,7 @@ if (!function_exists('robolist_lite_job_aearch')) {
                     <div class="banner-search-input-item search-key">
                 	<select id="search_keywords" name="search_keywords" class="selectpicker select-country">
 				<option value="">Land auswählen</option> 
-                        <option value="Ostereich">Ostereich</option> 
-                        <option value="Deutschland">Deutschland</option> 
+                        <option value="Österreich">Österreich</option> 
                         <option value="Slowenien">Slowenien</option> 
                         <option value="Deutschland">Deutschland</option> 
                         <option value="Kroatien">Kroatien</option> 

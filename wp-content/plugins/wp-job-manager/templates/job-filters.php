@@ -30,7 +30,7 @@ do_action( 'job_manager_job_filters_before', $atts );
 			<label for="search_keywords"><?php esc_html_e( 'Land', 'wp-job-manager' ); ?></label>
 			<select id="search_keywords" name="search_keywords" class="selectpicker select-country">
 				<option value="">Land auswählen</option>
-				<option value="Ostereich">Ostereich</option> 
+				<option value="Österreich">Österreich</option> 
 				<option value="Deutschland">Deutschland</option> 
 				<option value="Slowenien">Slowenien</option> 
 				<option value="Deutschland">Deutschland</option> 

@@ -172,53 +172,75 @@ if (have_posts()) :
                 </div>
             </div>
 
-            <div class="listing-content section">
-                <div class="container">
-                    <div class="row">
-                        <div class="detail-label">Land</div>
-                        <div class="detail-value"> <?php echo $country; ?></div>
+            <div class="details-container">
+                <h3 class="title-review">Details</h3>
+                <div class="listing-content section">
+                            <div class="detail-wrapper">
+                                <div class="detail-label">Land</div>
+                                <div class="detail-value"> <?php echo $country; ?></div>
+                            </div>
+                            <div class="detail-wrapper">
 
-                        <div class="detail-label">Stadt/PLZ</div>
-                        <div class="detail-value"> <?php echo $location; ?></div>
+                                <div class="detail-label">Stadt/PLZ</div>
+                                <div class="detail-value"> <?php echo $location; ?></div>
+                            </div>
+                            <div class="detail-wrapper">
+                                <div class="detail-label">ADDRESSE</div>
+                                <div class="detail-value"> <?php echo $address; ?></div>
+                            </div>
+                            <div class="detail-wrapper">
+                                <div class="detail-label">EMAIL ADDRESSE</div>
+                                <div class="detail-value"> <?php echo $email; ?></div>
+                            </div>
 
-                        <div class="detail-label">ADDRESSE</div>
-                        <div class="detail-value"> <?php echo $address; ?></div>
+                            <div class="detail-wrapper">
 
-                        <div class="detail-label">EMAIL ADDRESSE</div>
-                        <div class="detail-value"> <?php echo $email; ?></div>
+                                <div class="detail-label">WEBSITE</div>
+                                <div class="detail-value"> <?php echo $website; ?></div>
+                            </div>
 
-                        <div class="detail-label">WEBSITE</div>
-                        <div class="detail-value"> <?php echo $website; ?></div>
+                            <div class="detail-wrapper">
 
-                        <div class="detail-label">VIDEO</div>
-                        <div class="detail-value"> <?php echo $phone; ?></div>
+                                <div class="detail-label">VIDEO</div>
+                                <div class="detail-value"> <?php echo $phone; ?></div>
+                            </div>
 
-                        <div class="detail-label">KATEGORIE</div>
-                        <div class="detail-value"> <?php echo esc_attr($category->name); ?></div>
+                            <div class="detail-wrapper">
 
-                        <div class="detail-label">TELEFON</div>
-                        <div class="detail-value"> <?php echo $phone; ?></div>
+                                <div class="detail-label">KATEGORIE</div>
+                                <div class="detail-value"> <?php echo esc_attr($category->name); ?></div>
+                            </div>
 
-                        <div class="detail-label">ANGEBOT</div>
-                        <div class="detail-value"> <?php echo $price; ?></div>
+                            <div class="detail-wrapper">
 
-                        <div class="col-md-12">
-                            <div class="detail-label">BESCHREIBUNG VOM UNTERNEHMEN</div>
+                                <div class="detail-label">TELEFON</div>
+                                <div class="detail-value"> <?php echo $phone; ?></div>
+                            </div>
 
-                            <?php
-                                    the_content();
-                                    wp_link_pages(array(
-                                        'before' => '<div class="page-links">' . esc_html__('Pages:', 'robolist-lite'),
-                                        'after'  => '</div>',
-                                    ));
-                                    if (comments_open() || get_comments_number()) :
-                                        comments_template();
-                                    endif;
+                            <div class="detail-wrapper">
 
-                                    ?>
+                                <div class="detail-label">ANGEBOT</div>
+                                <div class="detail-value"> <?php echo $price; ?></div>
+                            </div>
 
-                        </div>
-                    </div>
+                            <div class="detail-wrapper">
+                                <div class="col-md-12">
+                                    <div class="detail-label">BESCHREIBUNG VOM UNTERNEHMEN</div> 
+                                        <?php
+                                                                                                                                        the_content();
+                                                                                                                                        wp_link_pages(array(
+                                                                                                                                            'before' => '<div class="page-links">' . esc_html__('Pages:', 'robolist-lite'),
+                                                                                                                                            'after'  => '</div>',
+                                                                                                                                        ));
+                                                                                                                                        if (comments_open() || get_comments_number()) :
+                                                                                                                                            comments_template();
+                                                                                                                                        endif;
+
+                                        ?> 
+                                </div>
+
+                            </div>
+ 
                 </div>
             </div>
         </div>
