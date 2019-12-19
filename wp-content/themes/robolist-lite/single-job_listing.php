@@ -91,33 +91,50 @@ if (have_posts()) :
 
         <div class="listing-single-slider section">
 
-            <?php
-                    if (!empty($all_images) && count($all_images) > 2) { ?>
+        <div class="listing-single-slider section">
+            <?php 
+
+                                                if (count($gallery_images) > 2 ) {
+                                                    $bg_img = $gallery_images[0];
+            ?>
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="listing-gallery-wrap">
                             <?php
-                                        foreach ($all_images as $g) {
-                                            $image_style = "style='background-image:url(" . esc_url($g) . ")'";
-                                            echo '<div class="listing-gallery-holder" ' . wp_kses_post($image_style) . '"></div>';
-                                        }
-                                        ?>
+                                                    foreach ($gallery_images as $g) {
+                                                        $image_style = "style='background-image:url(" . esc_url($g) . ")'";
+                                                        echo '<div class="listing-gallery-holder" ' . wp_kses_post($image_style) . '"></div>';
+                                                    }
+                            ?>
                         </div>
                     </div>
                 </div>
-            <?php  } else {
-                        ?>
+            <?php
+                                                } elseif (is_array($gallery_images)  && count($gallery_images) > 0 && count($gallery_images) <= 2) {
+           ?>
                 <div class="container-fluid">
                     <div class="row">
                         <?php
-                                    $image_style = "style='background-image:url(" . esc_url($feature_image) . ")'";
-                                    echo '<div class="listing-img-wrap" ' . wp_kses_post($image_style) . '"></div>';
-                                    ?>
+                                                    $image_style = "style='background-image:url(" . esc_url($gallery_images[0]) . ")'";
+                                                    echo '<div class="listing-img-wrap" ' . wp_kses_post($image_style) . '"></div>';
+                        ?>
+                    </div>
+                </div>
+            <?php } else {
+
+            ?>
+                <div class="container-fluid">
+                    <div class="row">
+                        <?php
+                                                    $image_style = "style='background-image:url(" . esc_url($gallery_images) . ")'";
+                                                    echo '<div class="listing-img-wrap" ' . wp_kses_post($image_style) . '"></div>';
+                        ?>
                     </div>
                 </div>
             <?php
-                    }
-                    ?>
+                                                }
+            ?>
 
             <div class="listing-detail-wrap">
                 <div class="container">

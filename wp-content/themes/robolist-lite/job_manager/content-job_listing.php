@@ -18,6 +18,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $post;
 $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+$gallery = get_post_meta(get_the_ID(), '_main_image');
+$gallery_images = $gallery[0];
+if(is_array($gallery_images)){
+    $gallery_images = $gallery_images[0];
+} 
 $category = get_the_terms($post->ID, 'job_listing_category');
 $price = get_post_meta($post->ID, '_price_field');
 $location = get_post_meta($post->ID, '_job_location');
@@ -53,7 +58,7 @@ else{
         <li <?php job_listing_class(); ?> data-longitude="<?php echo esc_attr( $post->geolocation_lat ); ?>" data-latitude="<?php echo esc_attr( $post->geolocation_long ); ?>">
 	<?php echo '<a href="' . esc_url(get_the_permalink()) . '" class="link-detail-page">'; ?>
             <div class="listing-content-wrap">
-                <div class="listing-thumb" style="background-image:url(<?php echo esc_url($image); ?>)">
+                <div class="listing-thumb" style="background-image:url(<?php echo esc_url($gallery_images); ?>)">
                     <?php if (is_array($category) && !empty($page_id)) {
                         $cat_data = $category[0];
                         ?>
