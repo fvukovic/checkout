@@ -235,7 +235,7 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 						'taxonomy'    => 'job_listing_category',
 					],
 					'job_description' => [
-						'label'    => __( 'Beschreibung vom unternehmen', 'wp-job-manager' ),
+						'label'    => __( 'Beschreibung', 'wp-job-manager' ),
 						'type'     => 'wp-editor',
 						'required' => true,
 						'priority' => 5,
@@ -673,7 +673,7 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 			}
 
 			// Update the job.
-			$this->save_job( $values['job']['job_title'], $values['job']['job_description'], $post_status, $values );
+			$this->save_job( $values['job']['job_title'],"", $post_status, $values );
 			$this->update_job_data( $values );
 
 			if ( $this->job_id ) {

@@ -255,7 +255,7 @@ if (is_array($location)  && !empty($location)) {
                     </div>
                     <?php if($formRole == "premium"){ ?>    
                     <div class="detail-wrapper">
-                        <div class="detail-label">BESCHREIBUNG VOM UNTERNEHMEN</div>
+                        <div class="detail-label">BESCHREIBUNG</div>
                         <?php
                                                     the_content();
                                                     wp_link_pages(array(

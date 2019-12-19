@@ -75,6 +75,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 												if ( $value['nonce'] ) {
 													$action_url = wp_nonce_url( $action_url, 'job_manager_my_job_actions' );
 												}
+												$user = wp_get_current_user(); 
+												$user->membership_level = pmpro_getMembershipLevelForUser($user->ID);  
+							   
+											   if ($user->membership_level->name =="Premium") {
+												$action_url = $action_url . "&role=premium";
+												}else{
+													$action_url = $action_url . "&role=free";
+												}
 												echo '<li><a href="' . esc_url( $action_url ) . '" class="job-dashboard-action-' . esc_attr( $action ) . '">' . esc_html( $value['label'] ) . '</a></li>';
 											}
 										?>

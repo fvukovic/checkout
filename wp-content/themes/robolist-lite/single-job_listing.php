@@ -223,10 +223,9 @@ if (have_posts()) :
                                 <div class="detail-value"> <?php echo $price; ?></div>
                             </div>
 
-                            <?php if($description==""){ ?>    
-                            <div class="detail-wrapper">
-                                <div class="col-md-12">
-                                    <div class="detail-label">BESCHREIBUNG VOM UNTERNEHMEN</div> 
+                            <?php if(!empty($description)){ ?>    
+                            <div class="detail-wrapper"> 
+                                    <div class="detail-label">BESCHREIBUNG</div> 
                                         <?php
                                                                                                                                         the_content();
                                                                                                                                         wp_link_pages(array(
@@ -237,8 +236,7 @@ if (have_posts()) :
                                                                                                                                             comments_template();
                                                                                                                                         endif;
 
-                                        ?> 
-                                </div>
+                                        ?>  
 
                             </div>
                             <?php }?>
