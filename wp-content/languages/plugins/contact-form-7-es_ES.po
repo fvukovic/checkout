@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-11-12 17:58:34+0000\n"
+"PO-Revision-Date: 2019-11-19 15:54:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -756,7 +756,7 @@ msgstr "El usuario introdujo una respuesta incorrecta"
 
 #: modules/number.php:170
 msgid "Slider"
-msgstr "Selector deslizante"
+msgstr "Carrusel"
 
 #: modules/number.php:169
 msgid "Spinbox"

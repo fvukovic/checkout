@@ -7,7 +7,7 @@ $args = array(
 );
 
 $query = new WP_Query($args);
-
+ 
     ?>
     <!-- Start of feature section -->
 

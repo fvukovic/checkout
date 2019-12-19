@@ -124,7 +124,7 @@ $head_class = 'my-favorite';
                         )); ?>
                     </div><!-- End navbar-collapse -->
                 </nav>
-            </div>            
+            </div>
         </div>
     </div>
     <!-- End of Navigation -->
@@ -139,20 +139,19 @@ $head_class = 'my-favorite';
         }
     ?>
 
-    <div class="banner-wrapper parallax" <?php echo wp_kses_post($background_style); ?>>
-        <div class="row">
-            <div class="banner-text-wrap">
-                <?php
-                if($banner_title || $banner_description){
-                    if($banner_title)
-                        echo '<h2>'.esc_html($banner_title).'</h2>';
-                    if($banner_description)
-                        echo '<p>'.esc_html($banner_description).'</p>';
-                }
-                ?>
+ 
+            <div class="banner-container">
+		<?php
+			echo do_shortcode('[smartslider3 slider=2]');
+		?>
+			<div class="img-wrapper">
+                       		<img src="http://www.check-fit.com/testPage/wp-content/uploads/2019/12/CHECK-FIT_NOTO.png" alt="" title="">
+			</div>
+			<div class="description-wrapper">
+                       		Finden Sie das richtige Fitnessstudio, den richtigen Therapeuten, Trainer oder das richtige Gesundheitszentrum.
+			</div>
                     <?php  do_action('robolist_lite_header_search'); ?>
             </div>
-        </div>
     </div>
     <?php }
     else{

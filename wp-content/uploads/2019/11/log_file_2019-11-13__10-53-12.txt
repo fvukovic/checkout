@@ -3,7 +3,7 @@
 The import files for: Demo were successfully downloaded!
 Initial max execution time = 30
 Files info:
-Site URL = localhost/testPage
+Site URL = http://www.check-fit.com/testPage
 Data file = /home/.sites/123/site2589172/web/testPage/wp-content/uploads/2019/11/demo-content-import-file_2019-11-13__10-53-12.xml
 Widget file = /home/.sites/123/site2589172/web/testPage/wp-content/uploads/2019/11/demo-widgets-import-file_2019-11-13__10-53-12.json
 Customizer file = /home/.sites/123/site2589172/web/testPage/wp-content/uploads/2019/11/demo-customizer-import-file_2019-11-13__10-53-12.dat

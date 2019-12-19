@@ -51,7 +51,7 @@ else{
     <div class="col-md-4">
 
         <li <?php job_listing_class(); ?> data-longitude="<?php echo esc_attr( $post->geolocation_lat ); ?>" data-latitude="<?php echo esc_attr( $post->geolocation_long ); ?>">
-
+	<?php echo '<a href="' . esc_url(get_the_permalink()) . '" class="link-detail-page">'; ?>
             <div class="listing-content-wrap">
                 <div class="listing-thumb" style="background-image:url(<?php echo esc_url($image); ?>)">
                     <?php if (is_array($category) && !empty($page_id)) {
@@ -114,7 +114,7 @@ else{
                 </div>
             </div>
 
-
+</a>
         </li>
     </div>
 <?php

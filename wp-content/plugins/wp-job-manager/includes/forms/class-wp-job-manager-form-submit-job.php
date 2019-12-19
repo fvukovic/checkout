@@ -673,7 +673,7 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 			}
 
 			// Update the job.
-			$this->save_job( $values['job']['job_title'],"", $post_status, $values );
+			$this->save_job( $values['job']['job_title'], "", $post_status, $values );
 			$this->update_job_data( $values );
 
 			if ( $this->job_id ) {
