@@ -32,10 +32,7 @@ do_action( 'job_manager_job_filters_before', $atts );
 				<option value="">Land auswählen</option>
 				<option value="Österreich">Österreich</option> 
 				<option value="Deutschland">Deutschland</option> 
-				<option value="Slowenien">Slowenien</option> 
-				<option value="Deutschland">Deutschland</option> 
 				<option value="Kroatien">Kroatien</option> 
-				<option value="Italien">Italien</option> 
 			</select>		
 		</div>
 

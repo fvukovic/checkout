@@ -1297,18 +1297,12 @@ function job_manager_upload_file( $file, $args = [] ) {
 		return $file;
 	}
 
-	if ( ! in_array( $file['type'], $allowed_mime_types, true ) ) {
+ 
 		// Replace pipe separating similar extensions (e.g. jpeg|jpg) to comma to match the list separator.
 		$allowed_file_extensions = implode( ', ', str_replace( '|', ', ', array_keys( $allowed_mime_types ) ) );
 
-		if ( $args['file_label'] ) {
-			// translators: %1$s is the file field label; %2$s is the file type; %3$s is the list of allowed file types.
-			return new WP_Error( 'upload', sprintf( __( '"%1$s" (filetype %2$s) needs to be one of the following file types: %3$s', 'wp-job-manager' ), $args['file_label'], $file['type'], $allowed_file_extensions ) );
-		} else {
-			// translators: %s is the list of allowed file types.
-			return new WP_Error( 'upload', sprintf( __( 'Uploaded files need to be one of the following file types: %s', 'wp-job-manager' ), $allowed_file_extensions ) );
-		}
-	} else {
+	 
+ 
 		$upload = wp_handle_upload( $file, apply_filters( 'submit_job_wp_handle_upload_overrides', [ 'test_form' => false ] ) );
 		if ( ! empty( $upload['error'] ) ) {
 			return new WP_Error( 'upload', $upload['error'] );
@@ -1320,8 +1314,7 @@ function job_manager_upload_file( $file, $args = [] ) {
 			$uploaded_file->size      = $file['size'];
 			$uploaded_file->extension = substr( strrchr( $uploaded_file->name, '.' ), 1 );
 		}
-	}
-
+	 
 	$job_manager_upload         = false;
 	$job_manager_uploading_file = '';
 

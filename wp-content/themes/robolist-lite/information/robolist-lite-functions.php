@@ -142,7 +142,7 @@ if (!function_exists('robolist_lite_add_extra_field')) {
 
         $fields['_company_phone'] = array(
             'label' => esc_html__('Telefon', 'robolist-lite'),
-            'placeholder' => esc_html__('e.g +43-898-4364', 'robolist-lite'),
+            'placeholder' => esc_html__('e.g +42-898-4364', 'robolist-lite'),
             'priority' => 2.4
         );
         //TODO-Filip - ako zelimo dodat u dashboard editiranje -> Samo dashboard
@@ -226,7 +226,7 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
         }
 
 
-        $fields['job']['job_title']['label'] = esc_html__('Firmenname', 'robolist-lite');
+        $fields['job']['job_title']['label'] = esc_html__('Titel', 'robolist-lite');
         $fields['job']['application']['label'] = esc_html__('Email Addresse', 'robolist-lite');
         $fields['job']['application']['priority'] = 2.3; //TODO-filip email ustvari
         $fields['job']['job_category']['label'] = esc_html__('Kategorie', 'robolist-lite');
@@ -239,11 +239,11 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'priority' => 2.8
         );
         $fields['job']['price_field'] = array(
-            'label' => esc_html__('Angebot/Preis', 'robolist-lite'),
+            'label' => esc_html__('Angebot', 'robolist-lite'),
             'type' => 'text',
             'metakey' => 'price_field',
             'placeholder' => esc_html__("$20", 'robolist-lite'),
-            'required' => false,
+            'required' => true,
             'priority' => 3
         ); 
         $fields['job']['job_country']  = array(
@@ -256,10 +256,9 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'public' => 1,
             'editable' => 1, 
             'options' => array(
-                'Österreich' => 'Österreich',
+                'Ostereich' => 'Österreich',
                 'Deutschland' => 'Deutschland',
-                'Schweiz' => 'Schweiz',
-                'Kroatien' => 'Kroatien'),
+                'Slowenien' => 'Slowenien',
             'priority' => 1.1
         );
       
@@ -280,7 +279,7 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
         $formRole = $_REQUEST['role']; 
 
         if ($formRole == "premium") {
-           $fields['job']['main_image']['multiple'] = true;
+            $fields['job']['main_image']['multiple'] = true;
 
             $fields['job']['address_field'] = array(
                 'label' => esc_html__('Addresse', 'robolist-lite'),
@@ -299,16 +298,17 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
         );
 
         }
- 
-        $fields['job']['main_video']['label']              = esc_html__( 'Video', 'robolist-lite' );
-        $fields['job']['main_video']['priority']           = 2.6;
-        $fields['job']['main_video']['required']           = false;
-        $fields['job']['main_video']['type']               = 'file';
-        $fields['job']['main_video']['ajax']               = false;
-          $fields['job']['main_video']['allowed_mime_types'] = [
-            '.mp4'  => 'video/mp4',
-        ];
-        $fields['job']['main_video']['multiple']           = true;
+
+        // $fields['job']['main_video']['label']              = esc_html__( 'Video', 'robolist-lite' );
+        // $fields['job']['main_video']['priority']           = 2.6;
+        // $fields['job']['main_video']['required']           = false;
+        // $fields['job']['main_video']['type']               = 'file';
+        // $fields['job']['main_video']['ajax']               = true;
+        // $fields['job']['main_video']['required']           = true;
+        //  $fields['job']['main_video']['allowed_mime_types'] = [
+        //     'mp4'  => 'MPEG',
+        // ];
+        // $fields['job']['main_video']['multiple']           = true;
 
 
         //TODO-filip Video
@@ -582,9 +582,11 @@ if (!function_exists('robolist_lite_job_aearch')) {
                     <div class="banner-search-input-item search-key">
                 	<select id="search_keywords" name="search_keywords" class="selectpicker select-country">
 				<option value="">Land auswählen</option> 
-                        <option value="Österreich">Österreich</option>  
+                        <option value="Österreich">Österreich</option> 
+                        <option value="Slowenien">Slowenien</option> 
                         <option value="Deutschland">Deutschland</option> 
-                        <option value="Kroatien">Kroatien</option>  
+                        <option value="Kroatien">Kroatien</option> 
+                        <option value="Italien">Italien</option> 
  
 			        </select>	
                     </div>

@@ -26,7 +26,12 @@ $description = get_post_meta($post->ID, '_job_description');
 $phone = get_post_meta($post->ID, '_company_phone');
 $gallery = get_post_meta($post->ID, '_main_image');
 $gallery_images = $gallery[0];
+$video = get_post_meta($post->ID, '_main_video'); 
 $searchString = ',';
+
+if (is_array($video) && !empty($video)) {
+    $video = $video[0][0] ? $video[0][0] : '';
+}
 
 if ((!is_array($gallery_images) && strpos($gallery_images, $searchString) !== false)) {
     $all_images = explode(',', $gallery_images);
@@ -106,7 +111,14 @@ if (have_posts()) :
                                                         $image_style = "style='background-image:url(" . esc_url($g) . ")'";
                                                         echo '<div class="listing-gallery-holder" ' . wp_kses_post($image_style) . '"></div>';
                                                     }
+
+                                                    if(!empty($video)){
                             ?>
+
+                                                        <video controls>
+                        <source id="job-video" src="<?php echo $video?>"  >  
+                    </video>
+                                                    <?php }?>
                         </div>
                     </div>
                 </div>
@@ -236,7 +248,7 @@ if (have_posts()) :
 
                             <div class="detail-wrapper">
 
-                                <div class="detail-label">ANGEBOT</div>
+                                <div class="detail-label">ANGEBOT/PREIS</div>
                                 <div class="detail-value"> <?php echo $price; ?></div>
                             </div>
 
@@ -258,6 +270,7 @@ if (have_posts()) :
                             </div>
                             <?php }?>
  
+
                 </div>
             </div>
         </div>

@@ -256,13 +256,11 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'public' => 1,
             'editable' => 1, 
             'options' => array(
-                'Ostereich' => 'Österreich',
+                'Österreich' => 'Österreich',
                 'Deutschland' => 'Deutschland',
                 'Schweiz' => 'Schweiz',
-                'Slowenien' => 'Slowenien',
-                'Kroatien' => 'Kroatien',
-                'Italien' => 'Italien'),
-            'priority' => 1.1
+                'Kroatien' => 'Kroatien'),
+             'priority' => 1.1
         );
       
 
@@ -587,10 +585,8 @@ if (!function_exists('robolist_lite_job_aearch')) {
                 	<select id="search_keywords" name="search_keywords" class="selectpicker select-country">
 				<option value="">Land auswählen</option> 
                         <option value="Österreich">Österreich</option> 
-                        <option value="Slowenien">Slowenien</option> 
                         <option value="Deutschland">Deutschland</option> 
                         <option value="Kroatien">Kroatien</option> 
-                        <option value="Italien">Italien</option> 
  
 			        </select>	
                     </div>
