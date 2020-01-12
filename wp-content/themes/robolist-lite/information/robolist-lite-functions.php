@@ -583,9 +583,7 @@ if (!function_exists('robolist_lite_job_aearch')) {
                 	<select id="search_keywords" name="search_keywords" class="selectpicker select-country">
 				<option value="">Land auswählen</option> 
                         <option value="Österreich">Österreich</option> 
-                        <option value="Slowenien">Slowenien</option> 
                         <option value="Deutschland">Deutschland</option> 
-                        <option value="Kroatien">Kroatien</option> 
                         <option value="Italien">Italien</option> 
  
 			        </select>	

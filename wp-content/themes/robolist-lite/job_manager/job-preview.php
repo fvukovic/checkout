@@ -131,10 +131,11 @@ if (is_array($location)  && !empty($location)) {
                             }
                             if (!empty($video)) {
                             ?>
-
+                            <div class="listing-gallery-holder video">
                                 <video controls>
                                     <source id="job-video" src="<?php echo $video ?>">
                                 </video>
+                        </div>
                             <?php } ?>
                         </div>
                     </div>

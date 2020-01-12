@@ -234,7 +234,7 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
         $fields['job']['company_phone'] = array(
             'label' => esc_html__('Telefon', 'robolist-lite'),
             'type' => 'text',
-            'placeholder' => esc_html__('e.g +42-898-4364', 'robolist-lite'),
+            'placeholder' => esc_html__('e.g +43-898-4364', 'robolist-lite'),
             'required' => true,
             'priority' => 2.8
         );
@@ -258,7 +258,6 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'options' => array(
                 'Österreich' => 'Österreich',
                 'Deutschland' => 'Deutschland',
-                'Schweiz' => 'Schweiz',
                 'Kroatien' => 'Kroatien'),
             'priority' => 1.1
         );
@@ -268,7 +267,7 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
   
 
 
-        $fields['job']['main_image']['label']              = esc_html__( 'Gallery', 'robolist-lite' );
+        $fields['job']['main_image']['label']              = esc_html__( 'Galerie', 'robolist-lite' );
         $fields['job']['main_image']['priority']           = 2.6;
         $fields['job']['main_image']['required']           = true;
         $fields['job']['main_image']['type']               = 'file';
@@ -298,8 +297,6 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'priority' => 2.5
         );
 
-        }
- 
         $fields['job']['main_video']['label']              = esc_html__( 'Video', 'robolist-lite' );
         $fields['job']['main_video']['priority']           = 2.6;
         $fields['job']['main_video']['required']           = false;
@@ -309,6 +306,9 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             '.mp4'  => 'video/mp4',
         ];
         $fields['job']['main_video']['multiple']           = true;
+
+
+        }
 
 
         //TODO-filip Video
