@@ -108,17 +108,20 @@ if (have_posts()) :
                             <div class="listing-gallery-wrap">
                                 <?php
                                 foreach ($gallery_images as $g) {
+                                    echo '<a href="'.esc_url($g).'" target="_blank"->';
                                     $image_style = "style='background-image:url(" . esc_url($g) . ")'";
-                                    echo '<div class="listing-gallery-holder" ' . wp_kses_post($image_style) . '"></div>';
+                                    echo '<div class="listing-gallery-holder" ' . wp_kses_post($image_style) . '"></div></a>';
                                 }
 
                                 if (!empty($video)) {
+                                    echo '<a href="'.$video.'" target="_blank"->';
                                 ?>
                                     <div class="listing-gallery-holder video">
-                                        <video controls>
+                                        <video>
                                             <source id="job-video" src="<?php echo $video ?>">
                                         </video>
                                     </div>
+                                </a>
                                 <?php } ?>
                             </div>
                         </div>
@@ -269,8 +272,16 @@ if (have_posts()) :
                                 ?>
 
                             </div>
-                        <?php } ?>
-
+                            <div class="detail-label">VIDEO</div>
+                        <?php }  
+                        if (!empty($video)) {
+                            ?>
+                            <div class="listing-gallery-holder video custom-video">
+                                <video controls>
+                                    <source id="job-video" src="<?php echo $video ?>">
+                                </video>
+                            </div>
+                            <?php } ?>
 
                     </div>
                 </div>

@@ -99,8 +99,19 @@ global $job_manager;
 			<input type="hidden" name="job_manager_form" value="<?php echo esc_attr($form); ?>" />
 			<input type="hidden" name="job_id" value="<?php echo esc_attr( $job_id ); ?>" />
 			<input type="hidden" name="step" value="<?php echo esc_attr( $step ); ?>" />
-			<input type="submit" name="submit_job" class="button" value="Next" />
-		</p>
+			<?php
+			$link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 
+			"https" : "http") . "://" . $_SERVER['HTTP_HOST'] .  
+			$_SERVER['REQUEST_URI']; 
+
+			if (strpos($link, 'job-dashboard-2') !== false) {
+				$link = "Speichern";
+			}else{
+				$link = "Next";
+			}
+
+			?>
+			<input type="submit" name="submit_job" class="button" value="<?php echo $link ?>" />		</p>
 
 	<?php else : ?>
 

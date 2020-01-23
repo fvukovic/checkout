@@ -48,6 +48,7 @@
 				<span class="pmpro_checkout-h3-name"><?php _e('Membership Level', 'paid-memberships-pro' );?></span>
 				<?php if(count($pmpro_levels) > 1) { ?><span class="pmpro_checkout-h3-msg"><a href="<?php echo pmpro_url("levels"); ?>"><?php _e('change', 'paid-memberships-pro' );?></a></span><?php } ?>
 			</h3>
+
 			<div class="pmpro_checkout-fields">
 				<p>
 					<?php printf(__('You have selected the <strong>%s</strong> membership level.', 'paid-memberships-pro' ), $pmpro_level->name);?>
@@ -205,6 +206,7 @@
 		<h3>
 			<span class="pmpro_checkout-h3-name"><?php _e('Choose your Payment Method', 'paid-memberships-pro' ); ?></span>
 		</h3>
+
 		<div class="pmpro_checkout-fields">
 			<span class="gateway_paypal">
 				<input type="radio" name="gateway" value="paypal" <?php if(!$gateway || $gateway == "paypal") { ?>checked="checked"<?php } ?> />
@@ -226,6 +228,7 @@
 		<h3>
 			<span class="pmpro_checkout-h3-name"><?php _e('Billing Address', 'paid-memberships-pro' );?></span>
 		</h3>
+
 		<div class="pmpro_checkout-fields">
 			<div class="pmpro_checkout-field pmpro_checkout-field-bfirstname">
 				<label for="bfirstname"><?php _e('First Name', 'paid-memberships-pro' );?></label>
@@ -367,6 +370,7 @@
 			<?php if(!empty($sslseal)) { ?>
 				<div class="pmpro_checkout-fields-display-seal">
 			<?php } ?>
+
 			<div class="pmpro_checkout-fields">
 				<?php
 					$pmpro_include_cardtype_field = apply_filters('pmpro_include_cardtype_field', false);
@@ -430,6 +434,7 @@
 						<p id="discount_code_message" class="pmpro_message" style="display: none;"></p>
 					</div>
 				<?php } ?>
+
 			</div> <!-- end pmpro_checkout-fields -->
 			<?php if(!empty($sslseal)) { ?>
 				<div class="pmpro_checkout-fields-rightcol pmpro_sslseal"><?php echo stripslashes($sslseal); ?></div>
@@ -446,6 +451,7 @@
 			<h3>
 				<span class="pmpro_checkout-h3-name"><?php echo $tospage->post_title?></span>
 			</h3>
+
 			<div class="pmpro_checkout-fields">
 				<div id="pmpro_license" class="pmpro_checkout-field">
 <?php echo wpautop(do_shortcode($tospage->post_content));?>
@@ -477,7 +483,6 @@
 		<?php } ?>
 
 		<?php if($pmpro_review) { ?>
-
 			<span id="pmpro_submit_span">
 				<input type="hidden" name="confirm" value="1" />
 				<input type="hidden" name="token" value="<?php echo esc_attr($pmpro_paypal_token); ?>" />
@@ -492,9 +497,20 @@
 				if($pmpro_checkout_default_submit_button)
 				{
 				?>
+				<br>
+				<div class="agbs">
+					
+					
+<div class="checkbox">
+    <input type="checkbox" id="checkbox_1" required>
+    <label for="checkbox_1">Überprüfen Sie hier, um anzuzeigen, dass Sie die Bedingungen der <a href="http://www.check-fit.com/testPage/Check-Fit.pdf" target="_blank">AGB's</a> gelesen haben und diesen zustimmen
+</label>
+</div>
+
+				</div>
 				<span id="pmpro_submit_span">
 					<input type="hidden" name="submit-checkout" value="1" />
-					<input type="submit"  id="pmpro_btn-submit" class="pmpro_btn pmpro_btn-submit-checkout" value="<?php if($pmpro_requirebilling) { _e('Submit and Check Out', 'paid-memberships-pro' ); } else { _e('Submit and Confirm', 'paid-memberships-pro' );}?> &raquo;" />
+					<input type="submit"  id="pmpro_btn-submit" class="pmpro_btn pmpro_btn-submit-checkout" value="Bestätigen" />
 				</span>
 				<?php
 				}

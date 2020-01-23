@@ -521,9 +521,9 @@ function pmpro_getLevelsCost( &$levels, $tags = true, $short = false ) {
 
 function pmpro_getLevelExpiration( &$level ) {
 	if ( $level->expiration_number ) {
-		$expiration_text = sprintf( __( 'Membership expires after %1$d %2$s.', 'paid-memberships-pro' ), $level->expiration_number, pmpro_translate_billing_period( $level->expiration_period, $level->expiration_number ) );
+		$expiration_text = 'Nach der ein Jährigen Frist, verlängert sich Automatisch Ihr Profil.';
 	} else {
-		$expiration_text = '';
+		$expiration_text = 'Nach der ein Jährigen Frist, verlängert sich Automatisch Ihr Profil.';
 	}
 
 	$expiration_text = apply_filters( 'pmpro_levels_expiration_text', $expiration_text, $level );

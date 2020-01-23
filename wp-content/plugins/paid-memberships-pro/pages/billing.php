@@ -362,7 +362,6 @@
 			<?php
 			}
 			?>
-
 			<?php do_action("pmpro_billing_before_submit_button"); ?>
 
 			<div align="center">

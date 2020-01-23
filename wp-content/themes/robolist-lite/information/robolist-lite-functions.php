@@ -258,7 +258,7 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'options' => array(
                 'Ostereich' => 'Österreich',
                 'Deutschland' => 'Deutschland',
-                'Slowenien' => 'Slowenien',
+                'Slowenien' => 'Slowenien'),
             'priority' => 1.1
         );
       
@@ -272,9 +272,11 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
         $fields['job']['main_image']['required']           = true;
         $fields['job']['main_image']['type']               = 'file';
         $fields['job']['main_image']['ajax']               = true;
-        $fields['job']['main_image']['placeholder']        = esc_html__( 'Recommended 3 Images', 'robolist-lite' );
+        $fields['job']['main_image']['placeholder']        = esc_html__( 'Wähle mindestens 3 Fotos aus', 'robolist-lite' );
         $fields['job']['main_image']['allowed_mime_types'] = $fields['company']['company_logo']['allowed_mime_types'];
         $fields['job']['main_image']['multiple']           = false;
+        $fields['job']['main_image']['description']              = esc_html__( 'Wähle mindestens 3 Fotos aus', 'robolist-lite' );
+
 
         $formRole = $_REQUEST['role']; 
 

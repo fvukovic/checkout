@@ -283,6 +283,20 @@ if (is_array($location)  && !empty($location)) {
                         </div>
                     <?php } ?>
 
+
+
+                    <div class="detail-label">BESCHREIBUNG</div>
+                    <?php
+                    if (!empty($video)) {
+                            ?>
+                            <div class="listing-gallery-holder video">
+                                <video controls>
+                                    <source id="job-video" src="<?php echo $video ?>">
+                                </video>
+                            </div>
+                            <?php } ?>
+
+
                 </div>
             </div>
         </div>
