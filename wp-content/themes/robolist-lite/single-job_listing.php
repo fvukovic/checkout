@@ -98,31 +98,20 @@ if (have_posts()) :
 
             <div class="listing-single-slider section">
                 <?php
-
-                if (count($gallery_images) > 2) {
-                    $bg_img = $gallery_images[0];
+ 
+                if (count($all_images) > 2) {
+                    $bg_img = $all_images[0];
                 ?>
-
+            
                     <div class="container-fluid">
                         <div class="row">
                             <div class="listing-gallery-wrap">
                                 <?php
-                                foreach ($gallery_images as $g) {
-                                    echo '<a href="'.esc_url($g).'" target="_blank"->';
+                                foreach ($all_images as $g) {
+                                    echo '<a data-fancybox="gallery" href="'.esc_url($g).'" src="'.esc_url($g).'">';
                                     $image_style = "style='background-image:url(" . esc_url($g) . ")'";
                                     echo '<div class="listing-gallery-holder" ' . wp_kses_post($image_style) . '"></div></a>';
-                                }
-
-                                if (!empty($video)) {
-                                    echo '<a href="'.$video.'" target="_blank"->';
-                                ?>
-                                    <div class="listing-gallery-holder video">
-                                        <video>
-                                            <source id="job-video" src="<?php echo $video ?>">
-                                        </video>
-                                    </div>
-                                </a>
-                                <?php } ?>
+                                }  ?>
                             </div>
                         </div>
                     </div>
@@ -131,9 +120,10 @@ if (have_posts()) :
                 ?>
                     <div class="container-fluid">
                         <div class="row">
+                        <a id="single_image"  href="<?php echo esc_url($gallery_images[0])?>" src="<?php echo esc_url($gallery_images[0])?>">
                             <?php
                             $image_style = "style='background-image:url(" . esc_url($gallery_images[0]) . ")'";
-                            echo '<div class="listing-img-wrap" ' . wp_kses_post($image_style) . '"></div>';
+                            echo '<div class="listing-img-wrap" ' . wp_kses_post($image_style) . '"></div></a>';
                             ?>
                         </div>
                     </div>
@@ -141,10 +131,11 @@ if (have_posts()) :
 
                 ?>
                     <div class="container-fluid">
-                        <div class="row">
+                        <div class="row"> 
+                            <a id="single_image"  href="<?php echo esc_url($gallery_images)?>" src="<?php echo esc_url($gallery_images)?>">
                             <?php
                             $image_style = "style='background-image:url(" . esc_url($gallery_images) . ")'";
-                            echo '<div class="listing-img-wrap" ' . wp_kses_post($image_style) . '"></div>';
+                            echo '<div class="listing-img-wrap" ' . wp_kses_post($image_style) . '"></div></a>';
                             ?>
                         </div>
                     </div>
@@ -264,7 +255,17 @@ if (have_posts()) :
                                 wp_link_pages(array(
                                     'before' => '<div class="page-links">' . esc_html__('Pages:', 'robolist-lite'),
                                     'after'  => '</div>',
-                                ));
+                                ));?>
+                                <div class="detail-label">VIDEO</div>
+                                <?php }  
+                                if (!empty($video)) {
+                                    ?>
+                                    <div class="listing-gallery-holder video custom-video">
+                                        <video controls>
+                                            <source id="job-video" src="<?php echo $video ?>">
+                                        </video>
+                                    </div>
+                                    <?php }  
                                 if (comments_open() || get_comments_number()) :
                                     comments_template();
                                 endif;
@@ -272,16 +273,7 @@ if (have_posts()) :
                                 ?>
 
                             </div>
-                            <div class="detail-label">VIDEO</div>
-                        <?php }  
-                        if (!empty($video)) {
-                            ?>
-                            <div class="listing-gallery-holder video custom-video">
-                                <video controls>
-                                    <source id="job-video" src="<?php echo $video ?>">
-                                </video>
-                            </div>
-                            <?php } ?>
+                
 
                     </div>
                 </div>
@@ -291,3 +283,8 @@ if (have_posts()) :
     endwhile; // end while
 endif; // end if
 get_footer(); ?>
+<script type="text/javascript">
+	$(document).ready(function() {
+        $("a#single_image").fancybox();
+	});
+</script>

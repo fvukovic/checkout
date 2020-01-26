@@ -19,6 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $post;
 $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
 $gallery = get_post_meta(get_the_ID(), '_main_image');
+$address = get_post_meta(get_the_ID(), '_address_field');
+
 $gallery_images = $gallery[0];
 if(is_array($gallery_images)){
     $gallery_images = $gallery_images[0];
@@ -58,8 +60,14 @@ else{
         <li <?php job_listing_class(); ?> data-longitude="<?php echo esc_attr( $post->geolocation_lat ); ?>" data-latitude="<?php echo esc_attr( $post->geolocation_long ); ?>">
 	<?php echo '<a href="' . esc_url(get_the_permalink()) . '" class="link-detail-page">'; ?>
             <div class="listing-content-wrap">
-                <div class="listing-thumb" style="background-image:url(<?php echo esc_url($gallery_images); ?>)">
-                    <?php if (is_array($category) && !empty($page_id)) {
+                <?php $pieces = explode(",", $gallery_images);
+               ?>
+                <div class="listing-thumb <?php if(isset($address) && !empty($address)){ echo 'premium';}?>"  style="background-image:url(<?php echo esc_url($pieces[0]); ?>)">
+                <? if(isset($address) && !empty($address)){ echo '<span class="premium-note"> Premium</span>';}
+                   else{echo '<span class="free-note"> Free</span>';
+                   }
+
+                   if (is_array($category) && !empty($page_id)) {
                         $cat_data = $category[0];
                         ?>
                         <a href="<?php echo esc_url(get_the_permalink($page_id).'?search_category='.$cat_data->term_id); ?>" class="listing-cat"><?php echo esc_attr($cat_data->name); ?></a>
