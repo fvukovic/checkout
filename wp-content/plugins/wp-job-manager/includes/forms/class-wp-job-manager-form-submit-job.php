@@ -754,6 +754,8 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 			$job_data['post_status'] = $status;
 		}
 
+		$job_data['comment_status'] = 'open';
+
 		$job_data = apply_filters( 'submit_job_form_save_job_data', $job_data, $post_title, $post_content, $status, $values );
 
 		if ( $this->job_id ) {

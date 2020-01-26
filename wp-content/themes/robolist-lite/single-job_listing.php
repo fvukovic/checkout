@@ -266,12 +266,11 @@ if (have_posts()) :
                                         </video>
                                     </div>
                                     <?php }  
-                                if (comments_open() || get_comments_number()) :
+                                if ((comments_open() || get_comments_number()) && !empty($address)) :
                                     comments_template();
                                 endif;
-
-                                ?>
-
+ 
+                                ?> 
                             </div>
                 
 
