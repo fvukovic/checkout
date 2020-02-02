@@ -51,7 +51,7 @@ do_action('job_manager_job_filters_before', $atts);
 		<?php elseif ($show_categories && !is_tax('job_listing_category') && get_terms(['taxonomy' => 'job_listing_category'])) : ?>
 			<div class="search_categories">
 				<label for="search_categories"><?php esc_html_e('Category', 'wp-job-manager'); ?></label>
- 					<?php job_manager_dropdown_categories(['taxonomy' => 'job_listing_category', 'hierarchical' => 1, 'show_option_all' => __('Any category', 'wp-job-manager'), 'name' => 'search_filip', 'orderby' => 'name', 'selected' => $selected_category, 'multiple' => false, 'hide_empty' => FALSE]); ?>
+ 					<?php job_manager_dropdown_categories(['taxonomy' => 'job_listing_category', 'hierarchical' => 1, 'show_option_all' => __('Any category', 'wp-job-manager'), 'name' => 'search_categories', 'orderby' => 'name', 'selected' => $selected_category, 'multiple' => false, 'hide_empty' => FALSE]); ?>
  			</div>
 		<?php endif; ?>
 
