@@ -237,7 +237,7 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 					'job_description' => [
 						'label'    => __( 'Beschreibung', 'wp-job-manager' ),
 						'type'     => 'wp-editor',
-						'required' => true,
+						'required' => false,
 						'priority' => 5,
 					],
 					'application'     => [

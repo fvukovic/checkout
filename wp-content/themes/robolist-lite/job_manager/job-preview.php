@@ -274,9 +274,7 @@ if (is_array($location)  && !empty($location)) {
                                 'before' => '<div class="page-links">' . esc_html__('Pages:', 'robolist-lite'),
                                 'after'  => '</div>',
                             ));
-                            if (comments_open() || get_comments_number()) :
-                                comments_template();
-                            endif;
+                         
 
                             ?>
 
@@ -285,7 +283,7 @@ if (is_array($location)  && !empty($location)) {
 
 
 
-                    <div class="detail-label">BESCHREIBUNG</div>
+                    <div class="detail-label">VIDEO</div>
                     <?php
                     if (!empty($video)) {
                             ?>

@@ -13,7 +13,7 @@ global $post;
 $post_format = get_post_format($post->ID);
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header sasa1">
 		<?php
         robolist_lite_blog_post_format($post_format, $post->ID);
 

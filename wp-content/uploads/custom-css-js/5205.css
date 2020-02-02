@@ -1,0 +1,56 @@
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+checkbox input[type="checkbox"] {
+    opacity: 0;
+}
+
+.checkbox label {
+    position: relative;
+    display: inline-block;
+    color: #101820FF !important;
+    font-weight: normal !important;
+    padding-left: 50px;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+    position: absolute;
+    content: "";
+    
+    /*Needed for the line-height to take effect*/
+    display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+.checkbox label::before{
+    height: 30px;
+    width: 32px;
+    left: 0px;
+    top: -5px;
+    border: 2px solid #101820FF;
+}
+
+/*Checkmark of the fake checkbox*/
+.checkbox label::after {
+	height: 10px;
+    width: 20px;
+    border-left: 3px solid #9FC131FF;
+    border-bottom: 3px solid #9FC131FF;
+    transform: rotate(-45deg);
+    left: 7px;
+    top: 3px;
+}
+
+/*Hide the checkmark by default*/
+.checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+
+/*Unhide on the checked state*/
+.checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+.checkbox input[type="checkbox"]:checked + label::before {
+    background: #101820FF;
+}</style>
+<!-- end Simple Custom CSS and JS -->

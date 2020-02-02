@@ -295,7 +295,7 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'label' => esc_html__('Website', 'robolist-lite'),
             'type' => 'text',
             'placeholder' => esc_html__("Addresse", 'robolist-lite'),
-            'required' => true,
+            'required' => false,
             'priority' => 2.5
         );
 

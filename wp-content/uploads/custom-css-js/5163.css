@@ -1,0 +1,11 @@
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+jQuery(document).ready(function( $ ){
+  
+console.log('dd');
+  $(".page-id-2297 .um-profile-meta .um-name").append("<p>Para 4</p>");
+   
+});
+
+</style>
+<!-- end Simple Custom CSS and JS -->

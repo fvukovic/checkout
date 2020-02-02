@@ -20,39 +20,39 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-// define( 'DB_NAME', '2589172db2' );
-
-// /** MySQL database username */
-// define( 'DB_USER', 'sql1808962' );
-
-// /** MySQL database password */
-// define( 'DB_PASSWORD', 'ThrePho.8' );
-
-// /** MySQL hostname */
-// define( 'DB_HOST', 'mysqlsvr70.world4you.com' );
-
-// /** Database Charset to use in creating database tables. */
-// define( 'DB_CHARSET', 'utf8' );
-
-// /** The Database Collate type. Don't change this if in doubt. */
-// define( 'DB_COLLATE', '' );
-
-define( 'DB_NAME', 'checkout' );
+define( 'DB_NAME', '2589172db2' );
 
 /** MySQL database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'sql1808962' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'ThrePho.8' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'mysqlsvr70.world4you.com' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
 
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
+
+// define( 'DB_NAME', 'checkout' );
+
+// /** MySQL database username */
+// define( 'DB_USER', 'root' );
+
+// /** MySQL database password */
+// define( 'DB_PASSWORD', '' );
+
+// /** MySQL hostname */
+// define( 'DB_HOST', 'localhost' );
+
+// /** Database Charset to use in creating database tables. */
+// define( 'DB_CHARSET', 'utf8' );
+
+// /** The Database Collate type. Don't change this if in doubt. */
+// define( 'DB_COLLATE', '' );
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -96,8 +96,9 @@ $table_prefix = 'wp_';
  */
 ini_set('display_errors','Off');
 ini_set('error_reporting', E_ALL );
-define('WP_DEBUG', true);
-define('WP_DEBUG_DISPLAY', true);
+define('WP_DEBUG', false);
+define('WP_DEBUG_DISPLAY', false);
+define( 'WP_AUTO_UPDATE_CORE', false );
 /* That's all, stop editing! Happy publishing. */
 /** Memory Limit */ 
 /** Absolute path to the WordPress directory. */

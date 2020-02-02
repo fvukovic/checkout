@@ -226,7 +226,7 @@ if (have_posts()) :
                         <?php if (!is_array($website)) { ?>
                             <div class="detail-wrapper">
                                 <div class="detail-label">WEBSITE</div>
-                                <div class="detail-value"> <?php echo $website; ?></div>
+                                <div class="detail-value"> <a href="https://<?php echo $website; ?>" target="_blank"><?php echo $website; ?></a></div>
                             </div>
                         <?php } ?>
                         <div class="detail-wrapper">

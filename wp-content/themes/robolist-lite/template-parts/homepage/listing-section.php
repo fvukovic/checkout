@@ -13,13 +13,13 @@ $query = new WP_Query($args);
 
     <div class="site-title">
         <div class="container">
-            <span class="welcome">Willkommen in unsere website</span>
+            <span class="welcome">Willkommen in Suchportal CHECK-FIT</span>
         </div>
     </div>
 
     <div class="site-description">
         <span class="description-text">
-			Suchen Sie nach einem Fitnessstudio? Ein professioneller Trainer? Oder ein Massagestudio? Sie sind am richtigen Ort. Mit Checkfit können Sie dies in 2 			sehr einfachen Schritten tun. Wählen Sie einen Ort und eine Kategorie und buchen Sie Ihren Termin direkt beim Werbetreibenden.
+			Suchen Sie nach einem Fitnessstudio, einen Professionellen Trainer, oder nach einen Massagestudio? Dann sind sie am richtigen Ort. Mit CHECK-FIT können Sie dies in drei 			sehr einfachen Schritten tun. Wählen Sie ein Land, Ort und eine Kategorie aus.<br>
 			Sie können Ihr Unternehmen auch auf unserer Website bewerben. <span class="register-text">Weitere Details unten:</span>
         </span>
     </div>
@@ -48,7 +48,7 @@ Möchten Sie ein kostenloses Profil erstellen? Klicken Sie auf den Registrierung
                         <ul class="register-list">
                             <li>Grundprofil auf unseren Website</li>
                             <li>1 Foto hochladen</li>
-                            <li>Erscheinf mit Name oder Firmenname</li>
+                            <li>Erscheint mit Name oder Firmenname</li>
                         </ul>
 
                         <a href="http://www.check-fit.com/testPage/register/" class="btn-register">Registrieren</a>
@@ -75,7 +75,8 @@ Möchten Sie ein kostenloses Profil erstellen? Klicken Sie auf den Registrierung
                             <li>Vollständiges Profil auf unseren Website</li>
                             <li>Unbegrenzt Fotos hochladen</li>
                             <li>1 Video hochladen</li>
-                            <li>Eine Kategorie für 3 Standorte möglich</li>
+                            <li>Mit einem Profil 2 Standorte möglich</li>
+			    <li>Bewertungen aktiviert</li>
                         </ul>
 
                         <a href="http://www.check-fit.com/testPage/register/" class="btn-register">Registrieren</a>
@@ -90,6 +91,7 @@ Möchten Sie ein kostenloses Profil erstellen? Klicken Sie auf den Registrierung
             </div>
         </div>
     </section>
+
 
     <section class="company-data">
         <div class="container">
@@ -132,6 +134,11 @@ Möchten Sie ein kostenloses Profil erstellen? Klicken Sie auf den Registrierung
 </div>
         </div>
     </section>
+<section class="agbs-data">
+ <div class="container">
+<a href="http://www.check-fit.com/testPage/Check-Fit.pdf" target="_blank">Allgemeine Geschäftsbedingungen</a> -> Check-Fit / Onlineportal 
+</div>
+</section>
 
     <!-- End of feature section -->
    
