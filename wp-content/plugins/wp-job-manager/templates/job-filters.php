@@ -80,11 +80,13 @@ do_action('job_manager_job_filters_before', $atts);
  
 	jQuery(document).ready(function($) {
 		let searchParams = new URLSearchParams(window.location.search) 
-		$("#search_keywords").val(searchParams.get('search_keywords')).change();
-		$("#search_location").val(searchParams.get("search_location")) 
-		$("#search_categories" ).val(searchParams.get('search_category')).change(); 
-	 
-		
+		$("#search_keywords").val(searchParams.get('search_keywords')).change(); 
+ 		 $('#search_keywords').select(searchParams.get('search_category')); 
+		$("#search_location").val(searchParams.get("search_location"))  
+		$("#search_location").text(searchParams.get("search_location"))  
+
+		 $('#search_categories').val(searchParams.get('search_category'));  
+
 	});
 </script>
 <?php do_action('job_manager_job_filters_after', $atts); ?>

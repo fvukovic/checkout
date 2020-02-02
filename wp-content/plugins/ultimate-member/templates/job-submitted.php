@@ -30,7 +30,7 @@ switch ( $job->post_status ) :
 	break;
 	case 'pending' :
 		echo '<script type="text/javascript">
-           window.location = "/testpage/membership-account/membership-confirmation/?level=1"
+           window.location = "/membership-account/membership-confirmation/?level=1"
       </script>';
 	break;
 	default :

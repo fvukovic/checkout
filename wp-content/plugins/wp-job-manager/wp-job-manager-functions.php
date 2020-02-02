@@ -1118,10 +1118,11 @@ function job_manager_dropdown_categories( $args = '' ) {
 	$id = $r['id'] ? $r['id'] : $r['name'];
 
 	$output = "<select name='" . esc_attr( $r['name'] ) . "[]' id='" . esc_attr( $id ) . "' class='" . esc_attr( $r['class'] ) . "' " . ( $r['multiple'] ? "multiple='multiple'" : '' ) . " data-placeholder='" . esc_attr( $r['placeholder'] ) . "' data-no_results_text='" . esc_attr( $r['no_results_text'] ) . "' data-multiple_text='" . esc_attr( $r['multiple_text'] ) . "'>\n";
+	$output .= '<option id="filip" value="12222" ">Alle Kategorien</option>';
+ 
 
-	if ( $r['show_option_all'] ) {
-		$output .= '<option value="">' . esc_html( $r['show_option_all'] ) . '</option>';
-	}
+	 
+ 
 
 	if ( ! empty( $categories ) ) {
 		include_once JOB_MANAGER_PLUGIN_DIR . '/includes/class-wp-job-manager-category-walker.php';

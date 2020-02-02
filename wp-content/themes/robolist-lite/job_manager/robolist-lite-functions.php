@@ -269,7 +269,6 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
 
 
         $fields['job']['main_image']['label']              = esc_html__( 'Gallery', 'robolist-lite' );
-        $fields['job']['main_image']['description']              = esc_html__( 'Wähle mindestens 3 Fotos aus', 'robolist-lite' );
         $fields['job']['main_image']['priority']           = 2.6;
         $fields['job']['main_image']['required']           = false;
         $fields['job']['main_image']['type']               = 'file';
@@ -282,6 +281,7 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
 
         if ($formRole == "premium") {
             $fields['job']['main_image']['multiple'] = true;
+            $fields['job']['main_image']['description']              = esc_html__( 'Wähle mindestens 3 Fotos aus', 'robolist-lite' );
 
             $fields['job']['address_field'] = array(
                 'label' => esc_html__('Addresse', 'robolist-lite'),
@@ -299,6 +299,8 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
             'priority' => 2.5
         );
 
+        }else{
+            $fields['job']['main_image']['description']              = "";
         }
 
         // $fields['job']['main_video']['label']              = esc_html__( 'Video', 'robolist-lite' );
