@@ -311,7 +311,7 @@ if (is_array($location)  && !empty($location)) {
 
                 if ($formRole == "premium" && $user->membership_level->name != "Premium") { ?>
 
-                    <input type="button" onclick="window.location='/testPage/en/membership-account/membership-checkout/?level=1&post_id=<?php echo $post->ID ?>';" name="next" id="job_preview_submit_button" class="button job-manager-button-submit-listing" value="Next" />
+                    <input type="button" onclick="window.location='/membership-account/membership-checkout/?level=1&post_id=<?php echo $post->ID ?>';" name="next" id="job_preview_submit_button" class="button job-manager-button-submit-listing" value="Next" />
                 <?php } else {  ?>
                     <input type="submit" name="continue" id="job_preview_submit_button" class="button job-manager-button-submit-listing" value="Next" />
                 <?php  } ?>

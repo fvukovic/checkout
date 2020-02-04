@@ -1,0 +1,221 @@
+# Translation of Plugins - WP Updates Notifier - Stable (latest release) in German
+# This file is distributed under the same license as the Plugins - WP Updates Notifier - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-11-09 12:47:54+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - WP Updates Notifier - Stable (latest release)\n"
+
+#. Author URI of the plugin/theme
+msgid "http://l3rady.com/"
+msgstr "http://l3rady.com/"
+
+#. Author of the plugin/theme
+msgid "Scott Cariss"
+msgstr "Scott Cariss"
+
+#. Description of the plugin/theme
+msgid "Sends email to notify you if there are any updates for your WordPress site. Can notify about core, plugin and theme updates."
+msgstr "Sendet E-Mails, um dich zu benachrichtigen, wenn Updates für deine WordPress-Website verfügbar sind. Das Plugin kann dich sowohl über Aktualisierungen des WordPress-Cores als auch von Plugins und Themes informieren."
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/l3rady/wp-updates-notifier"
+msgstr "https://github.com/l3rady/wp-updates-notifier"
+
+#: wp-updates-notifier.php:768
+msgid "Yes but only active themes"
+msgstr "Ja, aber nur aktives Theme"
+
+#: wp-updates-notifier.php:756
+msgid "Yes but only active plugins"
+msgstr "Ja, aber nur aktive Plugins"
+
+#: wp-updates-notifier.php:754 wp-updates-notifier.php:766
+#: wp-updates-notifier.php:776 wp-updates-notifier.php:785
+msgid "Yes"
+msgstr "Ja"
+
+#: wp-updates-notifier.php:752 wp-updates-notifier.php:764
+#: wp-updates-notifier.php:786
+msgid "No"
+msgstr "Nein"
+
+#: wp-updates-notifier.php:740
+msgid "Separate multiple email address with a comma (,)"
+msgstr "Trenne mehrere E-Mail-Adressen durch Komma (,)"
+
+#: wp-updates-notifier.php:719
+msgid "Cron Command: "
+msgstr "Cron-Kommando"
+
+#: wp-updates-notifier.php:715
+msgid "Other Cron"
+msgstr "Anderer Cron"
+
+#: wp-updates-notifier.php:714
+msgid "WordPress Cron"
+msgstr "WordPress-Cron"
+
+#: wp-updates-notifier.php:703
+msgid "This is a test message from WP Updates Notifier."
+msgstr "Das ist eine Test-Nachricht von WP Updates Notifier."
+
+#: wp-updates-notifier.php:684
+msgid "Invalid hide updates value entered"
+msgstr "Ungültiger Wert für verborgene Updates eingegeben"
+
+#: wp-updates-notifier.php:676
+msgid "Invalid automatic updates value entered"
+msgstr "Ungültige Wert für automatische Aktualisierungen ausgewählt"
+
+#: wp-updates-notifier.php:668
+msgid "Invalid theme updates value entered"
+msgstr "Ungültiger Wert für Theme-Updates eingegeben"
+
+#: wp-updates-notifier.php:660
+msgid "Invalid plugin updates value entered"
+msgstr "Ungültiger Wert für Plugin-Updates eingegeben"
+
+#: wp-updates-notifier.php:652
+msgid "Invalid email from entered"
+msgstr "Ungültige Absender-E-Mail-Adresse eingegeben"
+
+#: wp-updates-notifier.php:644
+msgid "No email to address entered"
+msgstr "Keine E-Mail-Adresse eingegeben"
+
+#: wp-updates-notifier.php:633
+msgid "One or more email to addresses are invalid"
+msgstr "Eine oder mehrere E-Mail-Adressen sind ungültig"
+
+#: wp-updates-notifier.php:623
+msgid "Invalid frequency entered"
+msgstr "Ungültige Häufigkeit eingegeben"
+
+#: wp-updates-notifier.php:611 wp-updates-notifier.php:695
+msgid "Invalid cron method selected"
+msgstr "Ungültige Cron-Methode ausgewählt"
+
+#: wp-updates-notifier.php:601
+msgid "Hide core WP update nag from non-admin users?"
+msgstr "WordPress-Core-Updates vor Nicht-Administrator-Benutzern verstecken?"
+
+#: wp-updates-notifier.php:600
+msgid "Notify automatic core updates to this address?"
+msgstr "Benachrichtigungen über automatische Aktualisierungen des Cores an diese Adresse?"
+
+#: wp-updates-notifier.php:599
+msgid "Notify about theme updates?"
+msgstr "Über Theme-Aktualisierungen benachrichtigen?"
+
+#: wp-updates-notifier.php:598
+msgid "Notify about plugin updates?"
+msgstr "Über Plugin-Aktualisierungen benachrichtigen?"
+
+#: wp-updates-notifier.php:597
+msgid "Notify email from"
+msgstr "Benachrichtigungs-E-Mail-Absender"
+
+#: wp-updates-notifier.php:596
+msgid "Notify email to"
+msgstr "Benachrichtigungs-E-Mail an"
+
+#: wp-updates-notifier.php:595
+msgid "Frequency to check"
+msgstr "Check-Häufigkeit"
+
+#: wp-updates-notifier.php:594
+msgid "Cron Method"
+msgstr "Cron-Methode"
+
+#: wp-updates-notifier.php:585
+msgid "Save settings with test email"
+msgstr "Einstellungen speichern und Test-E-Mail versenden"
+
+#: wp-updates-notifier.php:584
+msgid "Save settings"
+msgstr "Einstellungen speichern"
+
+#: wp-updates-notifier.php:573
+msgid "Last scanned: %s"
+msgstr "Zuletzt geprüft: %s"
+
+#: wp-updates-notifier.php:567
+msgid "%1s @ %2s"
+msgstr "%1s @ %2s"
+
+#: wp-updates-notifier.php:563
+msgid "Never"
+msgstr "Nie"
+
+#: wp-updates-notifier.php:557
+msgid "Updates Notifier"
+msgstr "Updates Notifier"
+
+#: wp-updates-notifier.php:512
+msgid "Successfully checked for updates."
+msgstr "Erfolgreich auf Aktualisierungen geprüft."
+
+#. #-#-#-#-#  tmp-wp-updates-notifier.pot (WP Updates Notifier 1.4.4) 
+#. #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: wp-updates-notifier.php:442
+msgid "WP Updates Notifier"
+msgstr "WP Updates Notifier"
+
+#: wp-updates-notifier.php:426
+msgid "WP Updates Notifier: Updates Available @ %s"
+msgstr "WP Updates Notifier: Aktualisierungen stehen bereit @ %s"
+
+#: wp-updates-notifier.php:360
+msgid "Theme: %s is out of date. Please update from version %s to %s"
+msgstr "Theme: %s ist veraltet. Bitte aktualisiere von Version %s auf %s"
+
+#: wp-updates-notifier.php:321
+msgid "Compatibility: %s"
+msgstr "Kompatibilität: %s"
+
+#: wp-updates-notifier.php:319
+msgid "Compatibility with WordPress %1$s: Unknown"
+msgstr "Kompatibilität mit WordPress %1$s: unbekannt"
+
+#: wp-updates-notifier.php:316
+msgid "Compatibility with WordPress %1$s: %2$d%% (%3$d \"works\" votes out of %4$d total)"
+msgstr "Kompatibilität mit WordPress %1$s: %2$d%% (%3$d „funktioniert“ Stimmen von %4$d insgesamt)"
+
+#: wp-updates-notifier.php:312
+msgid "Compatibility with WordPress %1$s: 100%% (according to its author)"
+msgstr "Kompatibilität mit WordPress %1$s: 100%% (laut Autor)"
+
+#: wp-updates-notifier.php:310
+msgid "Changelog: %s%s"
+msgstr "Änderungsprotokoll: %s%s"
+
+#: wp-updates-notifier.php:309
+msgid "Details: %s"
+msgstr "Details: %s"
+
+#: wp-updates-notifier.php:308
+msgid "Plugin: %s is out of date. Please update from version %s to %s"
+msgstr "Plugin: %s ist veraltet. Bitte aktualisiere von Version %s auf %s"
+
+#: wp-updates-notifier.php:266
+msgid "WP-Core: WordPress is out of date. Please update from version %s to %s"
+msgstr "WordPress-Core: WordPress ist veraltet. Bitte aktualisiere von Version %s auf %s"
+
+#: wp-updates-notifier.php:241
+msgid "Please visit %s to update."
+msgstr "Bitte besuche %s um zu updaten."
+
+#: wp-updates-notifier.php:240
+msgid "There are updates available for your WordPress site:"
+msgstr "Es sind Updates für deine WordPress-Website verfügbar:"
+
+#: wp-updates-notifier.php:210 wp-updates-notifier.php:593
+msgid "Settings"
+msgstr "Einstellungen"
