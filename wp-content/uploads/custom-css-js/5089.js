@@ -52,7 +52,7 @@ jQuery(document).ready(function( $ ){
       $(".um-field-username .um-field-error").text('Please enter your username or email');
       $(".um-field-password .um-field-error").text('Please enter your password');
        $(".um-notice.success").text('Your account was updated successfully');
-      $("#pmpro_message_bottom").append('Your card number is incomplete.');
+      $("#pmpro_message_bottom").append('Bitte geben Sie die richtige Kartennummer an');
       $(".um-field-user_login .um-field-error").text('Username is required');
       $(".um-field-user_email .um-field-error").text('Please enter your E-mail');
      $("#cookie_action_close_header").text('ACCEPT');

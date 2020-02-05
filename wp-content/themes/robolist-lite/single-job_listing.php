@@ -256,10 +256,10 @@ if (have_posts()) :
                                     'before' => '<div class="page-links">' . esc_html__('Pages:', 'robolist-lite'),
                                     'after'  => '</div>',
                                 ));?>
-                                <div class="detail-label">VIDEO</div>
                                 <?php }  
                                 if (!empty($video)) {
                                     ?>
+                                                                    <div class="detail-label">VIDEO</div>
                                     <div class="listing-gallery-holder video custom-video">
                                         <video controls>
                                             <source id="job-video" src="<?php echo $video ?>">

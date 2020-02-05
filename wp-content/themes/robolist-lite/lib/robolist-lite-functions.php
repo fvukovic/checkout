@@ -202,12 +202,12 @@ function robolist_lite_custom_comment_rating(){
         'enable_selective_ratings' => true,
         'default_rating'           => 4,
         'display_on_post_types'    => array( 'job_listing' => 'on'),
-        'review_rating_label'      => esc_html__( 'Your overall rating of this listing:', 'robolist-lite' ),
-        'review_title_label'       => esc_html__( 'Title of your review:', 'robolist-lite' ),
-        'review_title_placeholder' => esc_html__( 'Summarize your opinion or highlight an interesting detail', 'robolist-lite' ),
-        'review_label'             => esc_html__( 'Your Review', 'robolist-lite' ),
-        'review_placeholder'       => esc_html__( 'Tell about your experience or leave a tip for others', 'robolist-lite' ),
-        'review_submit_button'     => esc_html__( 'Submit your Review', 'robolist-lite' ),
+        'review_rating_label'      => esc_html__( 'Ihre Gesamtbewertung dieses Inserats:', 'robolist-lite' ),
+        'review_title_label'       => esc_html__( 'Titel deiner Bewertung:', 'robolist-lite' ),
+        'review_title_placeholder' => esc_html__( 'Fassen Sie Ihre Meinung zusammen oder heben Sie ein interessantes Detail hervor', 'robolist-lite' ),
+        'review_label'             => esc_html__( 'Deine Bewertung', 'robolist-lite' ),
+        'review_placeholder'       => esc_html__( 'Erzählen Sie von Ihren Erfahrungen oder hinterlassen Sie anderen einen Tipp', 'robolist-lite' ),
+        'review_submit_button'     => esc_html__( 'Geben Sie Ihre Bewertung', 'robolist-lite' ),
 
     );
 
@@ -275,13 +275,13 @@ if (!function_exists('robolist_lite_front_submit_job_form_fields')) {
         $fields['job']['main_image']['placeholder']        = esc_html__( 'Recommended 3 Images', 'robolist-lite' );
         $fields['job']['main_image']['allowed_mime_types'] = $fields['company']['company_logo']['allowed_mime_types'];
         $fields['job']['main_image']['multiple']           = false;
-        $fields['job']['main_image']['description']              = esc_html__( 'Wähle mindestens 3 Fotos aus', 'robolist-lite' );
 
 
         $formRole = $_REQUEST['role']; 
 
         if ($formRole == "premium") {
            $fields['job']['main_image']['multiple'] = true;
+           $fields['job']['main_image']['description']              = esc_html__( 'Wähle mindestens 3 Fotos aus', 'robolist-lite' );
 
             $fields['job']['address_field'] = array(
                 'label' => esc_html__('Addresse', 'robolist-lite'),

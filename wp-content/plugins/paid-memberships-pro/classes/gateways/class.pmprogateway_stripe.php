@@ -588,7 +588,7 @@ class PMProGateway_stripe extends PMProGateway {
                                    id="discount_code" name="discount_code" type="text" size="10"
                                    value="<?php echo esc_attr( $discount_code ) ?>"/>
                             <input type="button" id="discount_code_button" name="discount_code_button"
-                                   value="<?php _e( 'Apply', 'paid-memberships-pro' ); ?>"/>
+                                   value="Übernehmen>"/>
                             <p id="discount_code_message" class="pmpro_message" style="display: none;"></p>
                         </div>
 					<?php } ?>
