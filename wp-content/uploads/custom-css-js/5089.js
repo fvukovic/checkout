@@ -25,7 +25,7 @@ jQuery(document).ready(function( $ ){
       $("#pmpro_message_bottom").append('Ihre Kartennummer ist unvollständig.');
       $(".um-field-user_login .um-field-error").text('Benutzername ist erforderlich');
       $("#cookie_action_close_header").text('AKZEPTIEREN');
-      $(".detail-wrapper.komentari .title-review").text('Bewertungen');
+      $(".listing-content .title-review").text('Bewertungen');
       $(".detail-wrapper.komentari .pixrating_title").text('Titel');
       $(".detail-wrapper.komentari #pixrating_title").val('Titel');
       $("label[for='comment']").text('Nachricht');
@@ -33,6 +33,8 @@ jQuery(document).ready(function( $ ){
       $(".detail-wrapper.komentari .submit").val('Speichern');
       $(".detail-wrapper.komentari .title-review").text('Bewertungen');
        $("label[for='pixrating_title']").text('TITEL DEINER BEWERTUNG:');
+      $("#commentform #submit").val('Speichern');
+      
       
     }
   
@@ -52,11 +54,11 @@ jQuery(document).ready(function( $ ){
       $(".um-field-username .um-field-error").text('Please enter your username or email');
       $(".um-field-password .um-field-error").text('Please enter your password');
        $(".um-notice.success").text('Your account was updated successfully');
-      $("#pmpro_message_bottom").append('Bitte geben Sie die richtige Kartennummer an');
+      $("#pmpro_message_bottom").append('Your card number is incomplete.');
       $(".um-field-user_login .um-field-error").text('Username is required');
       $(".um-field-user_email .um-field-error").text('Please enter your E-mail');
      $("#cookie_action_close_header").text('ACCEPT');
-      $(".detail-wrapper.komentari .title-review").text('Reviews');
+      $(".listing-content .title-review").text('Reviews');
       $("label[for='add_post_rating']").text('YOUR OVERALL RATING OF THIS LISTING');
       $(".detail-wrapper.komentari .pixrating_title").text('Title');
       $(".detail-wrapper.komentari #pixrating_title").val('Title');
@@ -65,7 +67,9 @@ jQuery(document).ready(function( $ ){
       $(".detail-wrapper.komentari .submit").val('Submit');
       $(".page-id-2365 .no_job_listings_found").text('There is no search result for your request');
       $(".detail-wrapper.komentari .title-review").text('Reviews');
-      $("label[for='pixrating_title']").text('TITLE OF YOUR REVIEW:');    }
+      $("label[for='pixrating_title']").text('TITLE OF YOUR REVIEW:');
+    	$("#commentform #submit").val('Submit');
+    }
 });
 
 </script>

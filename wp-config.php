@@ -29,23 +29,23 @@
  * Ersetze datenbankname_hier_einfuegen mit dem Namen
  * mit dem Namen der Datenbank, die du verwenden möchtest.
  */
-define('DB_NAME', '2589172db5');
+define('DB_NAME', 'checkout');
 
 /**
  * Ersetze benutzername_hier_einfuegen
  * mit deinem MySQL-Datenbank-Benutzernamen.
  */
-define('DB_USER', 'sql3315934');
+define('DB_USER', 'root');
 
 /**
  * Ersetze passwort_hier_einfuegen mit deinem MySQL-Passwort.
  */
-define('DB_PASSWORD', 'jf+nzwny');
+define('DB_PASSWORD', '');
 
 /**
  * Ersetze localhost mit der MySQL-Serveradresse.
  */
-define('DB_HOST', 'mysqlsvr74.world4you.com');
+define('DB_HOST', 'localhost');
 
 /**
  * Der Datenbankzeichensatz, der beim Erstellen der
@@ -78,7 +78,7 @@ define('AUTH_SALT',        'Lunr$@9p+qaOb!Q3R79fNwvUx@5MkG$xV8b$+eAinb%q3:8U_Lhu
 define('SECURE_AUTH_SALT', 'q1T*LJ?K5#LczEP*tpoIEiE5RPAeX%K?ZPDF*CXHM7jA_IPej%JuBRto@Mvg9z');
 define('LOGGED_IN_SALT',   'q47:lyOU#!=g5dfmQD-QW4EssXSiIC*+oZs?dFKc1C7oXK9lNb02eotdbN@NNz');
 define('NONCE_SALT',       'OpxMrU6XaC9PvItqtI*NhP57bvSg=J2Wbb=jq=4Y#kHIub$te00VIyb6sOMAi8');
-
+define('WP_MEMORY_LIMI','128M');
 /**#@-*/
 
 /**
@@ -102,7 +102,12 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+ ini_set('display_errors','Off');
+ini_set('error_reporting', E_ALL );
+define('WP_DEBUG', true);
+define('WP_DEBUG_DISPLAY', true);
+define( 'WP_AUTO_UPDATE_CORE', true );
+define( 'FS_METHOD', 'direct' );
 
 /* Das war’s, Schluss mit dem Bearbeiten! Viel Spaß beim Bloggen. */
 /* That's all, stop editing! Happy blogging. */

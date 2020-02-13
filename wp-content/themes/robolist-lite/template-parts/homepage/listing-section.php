@@ -66,7 +66,7 @@ Möchten Sie ein kostenloses Profil erstellen? Klicken Sie auf den Registrierung
                 <div class="col-md-6 text-element order-second">
                     <div class="text-content mtop-0">
 
-                        <h2 class="mbr-title pt-2 mbr-fonts-style align-left display-2">Premium Profil (€14.90 - P/M)</h2>
+                        <h2 class="mbr-title pt-2 mbr-fonts-style align-left display-2">Premium Profil (€178 - Pro/Jahr)</h2>
                         <span class="description">
 				
 			Möchten Sie einen Premium-Profil registrieren? Klicken Sie auf den Registrierungsbutton und geben Sie Ihre Daten ein. Die Premium-Profil umfasst Folgendes:
@@ -116,7 +116,7 @@ Möchten Sie ein kostenloses Profil erstellen? Klicken Sie auf den Registrierung
 				<li>Döblingerhauptstraße 41/8</li>
 				<li>1190 Wien</li>
 				<li>Österreich</li>
-				<li>office@checkfit.at</li>
+				<li>office@check-fit.com</li>
 				<li>+43 676 913 1340</li>
 			</ul>
                     </div>

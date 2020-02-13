@@ -18,8 +18,7 @@ jQuery(document).ready(function( $ ){
   
     $(".page-id-2365 .section ul.job_listings .no_job_listings_found").text('aasasa');
 
-  
-  
+
 });
 
 </script>
