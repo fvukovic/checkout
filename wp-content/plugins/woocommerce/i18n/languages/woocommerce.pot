@@ -13099,9 +13099,9 @@ msgstr ""
 #: includes/wc-template-functions.php:813
 #. translators: %s privacy policy page name and link
 msgid ""
-"Your personal data will be used to support your experience throughout this "
-"website, to manage access to your account, and for other purposes described "
-"in our %s."
+"Ihre persönlichen Daten werden verwendet, um Ihre Bestellung zu bearbeiten, Ihre zu unterstützen "
+" Erfahrung auf dieser Website und für andere in unserer "
+"%s."
 msgstr ""
 
 #: includes/admin/settings/class-wc-settings-accounts.php:164
@@ -13120,8 +13120,8 @@ msgstr ""
 #: includes/wc-template-functions.php:809
 #. translators: %s privacy policy page name and link
 msgid ""
-"Your personal data will be used to process your order, support your "
-"experience throughout this website, and for other purposes described in our "
+"Ihre persönlichen Daten werden verwendet, um Ihre Bestellung zu bearbeiten, Ihre zu unterstützen "
+" Erfahrung auf dieser Website und für andere in unserer "
 "%s."
 msgstr ""
 
@@ -19531,7 +19531,7 @@ msgstr ""
 
 #: includes/gateways/paypal/includes/settings-paypal.php:29
 msgid ""
-"Pay via PayPal; you can pay with your credit card if you don't have a "
+"Pay via PayPal; you cadddddn pay with your credit card if you don't have a "
 "PayPal account."
 msgstr ""
 

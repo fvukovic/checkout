@@ -24,12 +24,7 @@ $display_th = true;
 					<?php continue; ?>
 				<?php endif; ?>
 				<tr class="cart-subtotal recurring-total">
-					<?php if ( $display_th ) : $display_th = false; ?>
-						<th rowspan="<?php echo esc_attr( $carts_with_multiple_payments ); ?>"><?php esc_html_e( 'Subtotal', 'woocommerce-subscriptions' ); ?></th>
-						<td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce-subscriptions' ); ?>"><?php wcs_cart_totals_subtotal_html( $recurring_cart ); ?></td>
-					<?php else : ?>
-						<td><?php wcs_cart_totals_subtotal_html( $recurring_cart ); ?></td>
-					<?php endif; ?>
+ 
 				</tr>
 			<?php endforeach; ?>
 			<?php $display_th = true; ?>

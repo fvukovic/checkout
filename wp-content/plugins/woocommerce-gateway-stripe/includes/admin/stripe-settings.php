@@ -24,7 +24,7 @@ return apply_filters(
 			'title'       => __( 'Description', 'woocommerce-gateway-stripe' ),
 			'type'        => 'text',
 			'description' => __( 'This controls the description which the user sees during checkout.', 'woocommerce-gateway-stripe' ),
-			'default'     => __( 'Pay with your credit card via Stripe.', 'woocommerce-gateway-stripe' ),
+			'default'     => __( 'Bezahlen Sie mit Ihrer Kreditkarte über Stripe.', 'woocommerce-gateway-stripe' ),
 			'desc_tip'    => true,
 		),
 		'webhook'                       => array(

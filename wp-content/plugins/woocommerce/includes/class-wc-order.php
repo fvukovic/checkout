@@ -101,6 +101,7 @@ class WC_Order extends WC_Abstract_Order {
 			return false;
 		}
 
+
 		try {
 			do_action( 'woocommerce_pre_payment_complete', $this->get_id() );
 
@@ -122,6 +123,22 @@ class WC_Order extends WC_Abstract_Order {
 			} else {
 				do_action( 'woocommerce_payment_complete_order_status_' . $this->get_status(), $this->get_id() );
 			}
+
+			delete_post_meta( $_REQUEST['listing-id'], '_job_expires' );
+			$update_job                  = [];
+			$update_job['ID']            = $_REQUEST['listing-id'];
+			$update_job['post_status']   = apply_filters( 'submit_job_post_status', 'pending', $job );
+			$update_job['post_date']     = current_time( 'mysql' );
+			$update_job['post_date_gmt'] = current_time( 'mysql', 1 );
+			$update_job['post_author']   = get_current_user_id();
+
+			// wp_update_post( $update_job );
+			wp_update_post( $update_job );
+
+
+
+			pmpro_changeMembershipLevel(1,get_current_user_id(),'active',null); 
+			//header("Location: /membership-account/membership-confirmation/?level=1");
 		} catch ( Exception $e ) {
 			/**
 			 * If there was an error completing the payment, log to a file and add an order note so the admin can take action.

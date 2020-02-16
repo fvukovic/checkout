@@ -681,7 +681,7 @@ msgid "This controls the description which the user sees during checkout."
 msgstr ""
 
 #: includes/settings/settings-ppec.php:275
-msgid "Pay via PayPal; you can pay with your credit card if you don't have a PayPal account."
+msgid "Pay via PayPal; you can pay with your credit cardddd if you don't have a PayPal account."
 msgstr ""
 
 #: includes/settings/settings-ppec.php:279

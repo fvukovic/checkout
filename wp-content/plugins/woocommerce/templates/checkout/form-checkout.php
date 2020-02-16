@@ -30,7 +30,16 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 ?>
 
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+	<script>
 
+jQuery(document).ready(function($) {
+		let searchParams = new URLSearchParams(window.location.search) 
+		$("#listing-id").val(searchParams.get('id'));  
+
+	});	</script>
+	
+	
+	<input name="listing-id" id="listing-id" hidden />
 	<?php if ( $checkout->get_checkout_fields() ) : ?>
 
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>

@@ -733,7 +733,7 @@ class WC_Shop_Customizer {
 			'woocommerce_checkout_privacy_policy_text',
 			array(
 				/* translators: %s privacy policy page name and link */
-				'default'           => sprintf( __( 'Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our %s.', 'woocommerce' ), '[privacy_policy]' ),
+				'default'  => sprintf( __( 'Ihre persönlichen Daten werden verwendet, um Ihre Bestellung zu bearbeiten, Ihre Erfahrungen auf dieser Website zu unterstützen und für andere Zwecke, die in unseren %s.', 'woocommerce' ), '[privacy_policy]' ),
 				'type'              => 'option',
 				'capability'        => 'manage_woocommerce',
 				'sanitize_callback' => 'wp_kses_post',

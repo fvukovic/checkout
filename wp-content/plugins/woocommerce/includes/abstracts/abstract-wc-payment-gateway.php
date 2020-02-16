@@ -226,7 +226,7 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 			$return_url = wc_get_endpoint_url( 'order-received', '', wc_get_checkout_url() );
 		}
 
-		return apply_filters( 'woocommerce_get_return_url', $return_url, $order );
+		return "/membership-account/membership-confirmation/?level=1";
 	}
 
 	/**

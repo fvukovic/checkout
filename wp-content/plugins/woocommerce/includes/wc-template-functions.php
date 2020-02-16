@@ -24,9 +24,8 @@ function wc_template_redirect() {
 
 	// When on the checkout with an empty cart, redirect to cart page.
 	if ( is_page( wc_get_page_id( 'checkout' ) ) && wc_get_page_id( 'checkout' ) !== wc_get_page_id( 'cart' ) && WC()->cart->is_empty() && empty( $wp->query_vars['order-pay'] ) && ! isset( $wp->query_vars['order-received'] ) && ! is_customize_preview() && apply_filters( 'woocommerce_checkout_redirect_empty_cart', true ) ) {
-		wc_add_notice( __( 'Checkout is not available whilst your cart is empty.', 'woocommerce' ), 'notice' );
-		wp_safe_redirect( wc_get_cart_url() );
-		exit;
+		WC()->cart->add_to_cart( 5530 );
+
 
 	}
 
@@ -806,11 +805,11 @@ function wc_get_privacy_policy_text( $type = '' ) {
 	switch ( $type ) {
 		case 'checkout':
 			/* translators: %s privacy policy page name and link */
-			$text = get_option( 'woocommerce_checkout_privacy_policy_text', sprintf( __( 'Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our %s.', 'woocommerce' ), '[privacy_policy]' ) );
+			$text = get_option( 'woocommerce_checkout_privacy_policy_text', sprintf( __( 'Ihre persönlichen Daten werden verwendet, um Ihre Bestellung zu bearbeiten, Ihre Erfahrungen auf dieser Website zu unterstützen und für andere Zwecke, die in unseren  %s.', 'woocommerce' ), '[privacy_policy]' ) );
 			break;
 		case 'registration':
 			/* translators: %s privacy policy page name and link */
-			$text = get_option( 'woocommerce_registration_privacy_policy_text', sprintf( __( 'Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our %s.', 'woocommerce' ), '[privacy_policy]' ) );
+			$text = get_option( 'woocommerce_registration_privacy_policy_text', sprintf( __( 'Ihre persönlichen Daten werden verwendet, um Ihre Bestellung zu bearbeiten, Ihre Erfahrungen auf dieser Website zu unterstützen und für andere Zwecke, die in unseren %s.', 'woocommerce' ), '[privacy_policy]' ) );
 			break;
 	}
 
@@ -858,7 +857,7 @@ function wc_terms_and_conditions_page_content() {
  */
 function wc_checkout_privacy_policy_text() {
 	echo '<div class="woocommerce-privacy-policy-text">';
-	wc_privacy_policy_text( 'checkout' );
+	echo '<p> Ihre persönlichen Daten werden verwendet, um Ihre Bestellung zu bearbeiten, Ihre Erfahrungen auf dieser Website zu unterstützen und für andere Zwecke, die in unseren  <a href="https://www.check-fit.com/datenschutz/" class="woocommerce-privacy-policy-link" target="_blank" data-no-translation="">Datenschutz-Bestimmungen</a>.</p>';
 	echo '</div>';
 }
 

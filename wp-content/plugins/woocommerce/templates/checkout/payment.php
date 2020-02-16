@@ -47,8 +47,18 @@ if ( ! is_ajax() ) {
 		<?php wc_get_template( 'checkout/terms.php' ); ?>
 
 		<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
+		<div class="agbs">
+					
+					
+					<div class="checkbox">
+						<input type="checkbox" id="checkbox_1" required>
+						<label class="checkbox_1_label" for="checkbox_1">Überprüfen Sie hier, um anzuzeigen, dass Sie die Bedingungen der <a href="http://www.check-fit.com/testPage/Check-Fit.pdf" target="_blank">AGB's</a> gelesen haben und diesen zustimmen
+					</label>
+					</div>
+					
+									</div>
 
-		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' ); // @codingStandardsIgnoreLine ?>
+		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Bestätigen" data-value="Bestätigen">Bestätigen</button>' ); // @codingStandardsIgnoreLine ?>
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 

@@ -542,7 +542,7 @@ msgid "Credit Card (Stripe)"
 msgstr ""
 
 #: includes/admin/stripe-settings.php:27
-msgid "Pay with your credit card via Stripe."
+msgid "Bezahlen Sie mit Ihrer Kreditkarte über Stripe."
 msgstr ""
 
 #: includes/admin/stripe-settings.php:37

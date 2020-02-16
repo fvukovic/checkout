@@ -889,11 +889,11 @@ function pmpro_cancelMembershipLevel( $cancel_level, $user_id = null, $old_level
  *      Success returns boolean true.
  *      Failure returns boolean false.
  */
+	// global $wpdb, $current_user, $pmpro_msg, $pmpro_msgt, $pmpro_confirm, $pmpro_error;
 function pmpro_changeMembershipLevel( $level, $user_id = null, $old_level_status = 'inactive', $cancel_level = null ) {
 	global $wpdb;
 	global $current_user, $pmpro_error;
-
-	if ( empty( $user_id ) ) {
+ 	if ( empty( $user_id ) ) {
 		$user_id = $current_user->ID;
 	}
 

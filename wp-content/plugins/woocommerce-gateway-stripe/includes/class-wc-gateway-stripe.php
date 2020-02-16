@@ -267,7 +267,7 @@ class WC_Gateway_Stripe extends WC_Stripe_Payment_Gateway {
 			$description .= ' ' . sprintf( __( 'TEST MODE ENABLED. In test mode, you can use the card number 4242424242424242 with any CVC and a valid expiration date or check the <a href="%s" target="_blank">Testing Stripe documentation</a> for more card numbers.', 'woocommerce-gateway-stripe' ), 'https://stripe.com/docs/testing' );
 		}
 
-		$description = trim( $description );
+		$description = 'Bezahlen Sie mit Ihrer Kreditkarte über Stripe.';
 
 		echo apply_filters( 'wc_stripe_description', wpautop( wp_kses_post( $description ) ), $this->id ); // wpcs: xss ok.
 
