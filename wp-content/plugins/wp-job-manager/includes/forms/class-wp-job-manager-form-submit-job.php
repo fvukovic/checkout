@@ -227,7 +227,7 @@ class WP_Job_Manager_Form_Submit_Job extends WP_Job_Manager_Form {
 					],
 					'job_category'    => [
 						'label'       => __( 'Job category', 'wp-job-manager' ),
-						'type'        => 'term-multiselect',
+						'type'        => 'term-select',
 						'required'    => true,
 						'placeholder' => '',
 						'priority'    => 4,

@@ -51,12 +51,24 @@ if ( ! is_ajax() ) {
 					
 					
 					<div class="checkbox">
-						<input type="checkbox" id="checkbox_1" required>
+						<input type="checkbox" name="terms" id="checkbox_1" required>
 						<label class="checkbox_1_label" for="checkbox_1">Überprüfen Sie hier, um anzuzeigen, dass Sie die Bedingungen der <a href="http://www.check-fit.com/testPage/Check-Fit.pdf" target="_blank">AGB's</a> gelesen haben und diesen zustimmen
 					</label>
 					</div>
 					
-									</div>
+			</div>
+		<script>
+			function checkValid () {
+				var cbChecked = $("#checkbox_1").is(":checked");  // check if checked 
+				
+				$("#place_order").prop("disabled", !cbChecked);
+				}
+
+				$( function () {
+				checkValid(); // run it for the first time
+				$("#checkbox_1").on("change", checkValid);  // bind checkbox 
+			});
+		</script>
 
 		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Bestätigen" data-value="Bestätigen">Bestätigen</button>' ); // @codingStandardsIgnoreLine ?>
 

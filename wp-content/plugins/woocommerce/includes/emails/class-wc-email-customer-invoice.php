@@ -82,8 +82,7 @@ if ( ! class_exists( 'WC_Email_Customer_Invoice', false ) ) :
 		public function get_subject() {
 			if ( $this->object->has_status( array( 'completed', 'processing' ) ) ) {
 				$subject = $this->get_option( 'subject_paid', $this->get_default_subject( true ) );
-
-				return apply_filters( 'woocommerce_email_subject_customer_invoice_paid', $this->format_string( $subject ), $this->object, $this );
+				return "Bestätigung für Premium-Konto";
 			}
 
 			$subject = $this->get_option( 'subject', $this->get_default_subject() );

@@ -29,7 +29,7 @@ do_action('job_manager_job_filters_before', $atts);
 		<!--TODO-Filip-->
 		<div class="search_keywords">
 			<label for="search_keywords"><?php esc_html_e('Land', 'wp-job-manager'); ?></label>
-			<select id="search_keywords" name="search_keywords" class="selectpicker select-country">
+			<select id="search_keywords"  name="search_keywords" class="selectpicker bootstrap-select select-country">
 				<option value="">Land auswählen</option>
 				<option value="Österreich">Österreich</option>
 				<option value="Deutschland">Deutschland</option>
@@ -79,6 +79,8 @@ do_action('job_manager_job_filters_before', $atts);
 <script>
  
 	jQuery(document).ready(function($) {
+		$(".dropdown-toggle").on("click", function () { $("#filip").val("") })
+
 		let searchParams = new URLSearchParams(window.location.search) 
 		$("#search_keywords").val(searchParams.get('search_keywords')).change(); 
  		 $('#search_keywords').select(searchParams.get('search_category')); 

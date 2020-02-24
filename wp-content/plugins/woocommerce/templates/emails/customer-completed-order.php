@@ -59,4 +59,5 @@ if ( $additional_content ) {
 /*
  * @hooked WC_Emails::email_footer() Output the email footer
  */
+?> <img src="https://www.check-fit.com/testPage/wp-content/uploads/2019/12/CHECK-FIT_NOTO.png" width="200" /> <?php
 do_action( 'woocommerce_email_footer', $email );

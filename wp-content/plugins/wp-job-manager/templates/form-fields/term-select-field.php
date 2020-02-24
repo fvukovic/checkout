@@ -35,6 +35,7 @@ wp_dropdown_categories( apply_filters( 'job_manager_term_select_field_wp_dropdow
 	'taxonomy'         => $field['taxonomy'],
 	'hierarchical'     => 1,
 	'show_option_all'  => false,
+	'class'  => 'selectpicker',
 	'show_option_none' => $field['required'] ? '' : '-',
 	'name'             => isset( $field['name'] ) ? $field['name'] : $key,
 	'orderby'          => 'name',

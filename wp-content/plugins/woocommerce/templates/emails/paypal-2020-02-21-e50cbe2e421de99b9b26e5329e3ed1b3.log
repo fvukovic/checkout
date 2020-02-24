@@ -1,0 +1,197 @@
+2020-02-21T07:56:15+00:00 INFO Subscription Request Parameters: Array
+(
+    [method] => POST
+    [uri] => https://api-3t.paypal.com/nvp
+    [user-agent] => WooCommerce-Subscriptions-PayPal/3.0.1 (WooCommerce/3.9.1; WordPress/5.2.4)
+    [headers] => Array
+        (
+        )
+
+    [body] => Array
+(
+    [USER] => *************************
+    [PWD] => ****************
+    [SIGNATURE] => ********************************************************
+    [VERSION] => 124
+    [METHOD] => SetExpressCheckout
+    [L_BILLINGTYPE0] => MerchantInitiatedBillingSingleAgreement
+    [L_BILLINGAGREEMENTDESCRIPTION0] => Orders with 
+    [RETURNURL] => https://www.check-fit.com/wc-api/wcs_paypal/?action=reference_transaction_account_check
+    [CANCELURL] => https://www.check-fit.com/wc-api/wcs_paypal/?action=reference_transaction_account_check
+    [LANDINGPAGE] => Login
+    [NOSHIPPING] => 1
+    [MAXAMT] => 0.00
+)
+
+    [duration] => 0.93739s
+)
+
+2020-02-21T07:56:15+00:00 INFO Subscription Request Response: Array
+(
+    [code] => 200
+    [message] => OK
+    [headers] => Requests_Utility_CaseInsensitiveDictionary Object
+        (
+            [data:protected] => Array
+                (
+                    [content-type] => text/plain; charset=utf-8
+                    [content-length] => 293
+                    [date] => Fri, 21 Feb 2020 07:56:15 GMT
+                    [cache-control] => max-age=0, no-cache, no-store, must-revalidate
+                    [caller_acct_num] => 745C030E01997C6FFE29CE016302763FFFFEC48104C23DDD193D7907DA15D958
+                    [paypal-debug-id] => 7d2edceec8eb3
+                    [x-paypal-api-rc] => 11452
+                    [x-paypal-operation-name] => SetExpressCheckout
+                    [x-slr-retry-api] => SetExpressCheckout
+                    [strict-transport-security] => max-age=31536000; includeSubDomains
+                )
+
+        )
+
+    [body] => Array
+(
+    [TIMESTAMP] => 2020-02-21T07:56:15Z
+    [CORRELATIONID] => 7d2edceec8eb3
+    [ACK] => Failure
+    [VERSION] => 124
+    [BUILD] => 54210256
+    [L_ERRORCODE0] => 11452
+    [L_SHORTMESSAGE0] => Merchant not enabled for reference transactions
+    [L_LONGMESSAGE0] => Merchant not enabled for reference transactions
+    [L_SEVERITYCODE0] => Error
+)
+
+)
+
+2020-02-21T21:07:07+00:00 INFO Generating payment form for order 5748. Notify URL: https://www.check-fit.com/wc-api/WC_Gateway_Paypal/
+2020-02-21T21:07:07+00:00 INFO PayPal Request Args for order 5748: Array
+(
+    [cmd] => _xclick-subscriptions
+    [business] => support@check-fit.com
+    [no_note] => 1
+    [currency_code] => EUR
+    [charset] => utf-8
+    [rm] => 2
+    [upload] => 1
+    [return] => /membership-account/membership-confirmation/?level=1&utm_nooverride=1
+    [cancel_return] => https://www.check-fit.com/cart__trashed/?cancel_order=true&order=wc_order_npbSpInj53aOq&order_id=5748&redirect&_wpnonce=ef0b20ee29
+    [page_style] => 
+    [image_url] => 
+    [paymentaction] => sale
+    [invoice] => WC-5748
+    [custom] => {"order_id":5748,"order_key":"wc_order_npbSpInj53aOq","subscription_id":5749,"subscription_key":"wc_order_PbmgK7X8zMewL"}
+    [notify_url] => https://www.check-fit.com/wc-api/WC_Gateway_Paypal/
+    [first_name] => ***
+    [last_name] => ***
+    [address1] => ***
+    [address2] => ***
+    [city] => ***
+    [state] => ***
+    [zip] => ***
+    [country] => ***
+    [email] => ***@***
+    [night_phone_a] => ***
+    [night_phone_b] => ***
+    [no_shipping] => 1
+    [tax_cart] => 0.00
+    [item_name_1] => ein Jahr Premium-Konto
+    [quantity_1] => 1
+    [amount_1] => 2
+    [item_number_1] => 
+    [item_name] => Subscription 5749 (Order 5748) - ein Jahr Premium-Konto
+    [a3] => 2.00
+    [p3] => 1
+    [t3] => Y
+    [src] => 1
+    [sra] => 0
+    [bn] => WooThemes_Cart
+)
+
+2020-02-21T21:25:24+00:00 INFO Generating payment form for order 5750. Notify URL: https://www.check-fit.com/wc-api/WC_Gateway_Paypal/
+2020-02-21T21:25:24+00:00 INFO PayPal Request Args for order 5750: Array
+(
+    [cmd] => _xclick-subscriptions
+    [business] => support@check-fit.com
+    [no_note] => 1
+    [currency_code] => EUR
+    [charset] => utf-8
+    [rm] => 2
+    [upload] => 1
+    [return] => /membership-account/membership-confirmation/?level=1&utm_nooverride=1
+    [cancel_return] => https://www.check-fit.com/cart__trashed/?cancel_order=true&order=wc_order_A2rMEhkYLkc8g&order_id=5750&redirect&_wpnonce=ef0b20ee29
+    [page_style] => 
+    [image_url] => 
+    [paymentaction] => sale
+    [invoice] => WC-5750
+    [custom] => {"order_id":5750,"order_key":"wc_order_A2rMEhkYLkc8g","subscription_id":5753,"subscription_key":"wc_order_h7rypXfQG3eFl"}
+    [notify_url] => https://www.check-fit.com/wc-api/WC_Gateway_Paypal/
+    [first_name] => ***
+    [last_name] => ***
+    [address1] => ***
+    [address2] => ***
+    [city] => ***
+    [state] => ***
+    [zip] => ***
+    [country] => ***
+    [email] => ***@***
+    [night_phone_a] => ***
+    [night_phone_b] => ***
+    [no_shipping] => 1
+    [tax_cart] => 0.00
+    [item_name_1] => ein Jahr Premium-Konto
+    [quantity_1] => 1
+    [amount_1] => 2
+    [item_number_1] => 
+    [item_name] => Subscription 5753 (Order 5750) - ein Jahr Premium-Konto
+    [a3] => 2.00
+    [p3] => 1
+    [t3] => Y
+    [src] => 1
+    [sra] => 0
+    [bn] => WooThemes_Cart
+)
+
+2020-02-21T21:45:01+00:00 INFO Generating payment form for order 5754. Notify URL: https://www.check-fit.com/wc-api/WC_Gateway_Paypal/
+2020-02-21T21:45:01+00:00 INFO PayPal Request Args for order 5754: Array
+(
+    [cmd] => _xclick-subscriptions
+    [business] => support@check-fit.com
+    [no_note] => 1
+    [currency_code] => EUR
+    [charset] => utf-8
+    [rm] => 2
+    [upload] => 1
+    [return] => /membership-account/membership-confirmation/?level=1&utm_nooverride=1
+    [cancel_return] => https://www.check-fit.com/cart__trashed/?cancel_order=true&order=wc_order_1wAGsq20tAELw&order_id=5754&redirect&_wpnonce=ef0b20ee29
+    [page_style] => 
+    [image_url] => 
+    [paymentaction] => sale
+    [invoice] => WC-5754
+    [custom] => {"order_id":5754,"order_key":"wc_order_1wAGsq20tAELw","subscription_id":5755,"subscription_key":"wc_order_l17jU9EXRtG4k"}
+    [notify_url] => https://www.check-fit.com/wc-api/WC_Gateway_Paypal/
+    [first_name] => ***
+    [last_name] => ***
+    [address1] => ***
+    [address2] => ***
+    [city] => ***
+    [state] => ***
+    [zip] => ***
+    [country] => ***
+    [email] => ***@***
+    [night_phone_a] => ***
+    [night_phone_b] => ***
+    [no_shipping] => 1
+    [tax_cart] => 0.00
+    [item_name_1] => ein Jahr Premium-Konto
+    [quantity_1] => 1
+    [amount_1] => 2
+    [item_number_1] => 
+    [item_name] => Subscription 5755 (Order 5754) - ein Jahr Premium-Konto
+    [a3] => 2.00
+    [p3] => 1
+    [t3] => Y
+    [src] => 1
+    [sra] => 0
+    [bn] => WooThemes_Cart
+)
+

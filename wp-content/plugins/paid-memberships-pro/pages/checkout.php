@@ -392,7 +392,7 @@
 					
 					
 <div class="checkbox">
-    <input type="checkbox" id="checkbox_1" required>
+    <input type="checkbox" name="terms" id="checkbox_1" required>
     <label for="checkbox_1">Überprüfen Sie hier, um anzuzeigen, dass Sie die Bedingungen der <a href="http://www.check-fit.com/testPage/Check-Fit.pdf" target="_blank">AGB's</a> gelesen haben und diesen zustimmen
 </label>
 </div>
